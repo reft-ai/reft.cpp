@@ -6,7 +6,8 @@
 [![Release](https://img.shields.io/github/v/release/reft-ai/reft.cpp)](https://github.com/reft-ai/reft.cpp/releases)
 <!--[![Publish](https://github.com/reft-ai/reft.cpp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/reft-ai/reft/actions/workflows/docker-publish.yml))-->
 
-xLM inference/training/serving in C/C++
+# What is `reft.cpp`
+### An xLM inference, training, and serving toolkit in C/C++ without any dependencies, inspired by [llm.c](https://github.com/karpathy/llm.c) and [nanochat](https://github.com/karpathy/nanochat) (both developed by [Karpathy](https://github.com/karpathy)).
 
 ## Hot topics
 
@@ -94,19 +95,37 @@ range of hardware - locally and in the cloud.
 - Pure C/C++ implementation without any dependencies
 - Custom CUDA kernels for running xLMs on NVIDIA GPUs (support for AMD GPUs via HIP and Moore Threads GPUs via MUSA)
 
-<details>
-<summary>Models</summary>
+## Supported models
 
-Typically the models below are supported as well.
+- :white_check_mark: : Done
+- :coffee: : In progress
 
-#### Text-only
+### Text-only
 
-- [x] [Deepseek models](https://huggingface.co/models?search=deepseek-ai/deepseek)
-- [x] [Qwen models](https://huggingface.co/models?search=Qwen/Qwen)
+  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | Meta GPU |
+  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
+  |[Qwen2.5-0.5/1.5/3/7/14/32/72B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen2.5-Math-1.5/7/72B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-math)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen2.5-Coder-0.5/1.5/3/7/14/32B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+	
+### Vision
 
-#### Multimodal
+  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | Meta GPU |
+  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
+  |[SAM](https://github.com/facebookresearch/segment-anything)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[ViT](https://github.com/google-research/vision_transformer)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+	
+	
+### Audio
 
-</details>
+  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | Meta GPU |
+  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
+  |[Whisper](https://huggingface.co/collections/openai/whisper-release)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[MeloTTS-English/...](https://huggingface.co/myshell-ai/MeloTTS-English)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
 
 <details>
 <summary>Bindings</summary>
