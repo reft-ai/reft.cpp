@@ -1,5 +1,6 @@
 # reft.cpp
-![reft](https://github.com/user-attachments/assets/c5e5fa51-29c2-4c5e-8a60-47f304570840)
+![reft cc-new-logo jpg](https://github.com/user-attachments/assets/25f0c2e7-0f64-41e9-979d-ddb0ff932c4d)
+
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Release](https://img.shields.io/github/v/release/reft-ai/reft.cpp)](https://github.com/reft-ai/reft.cpp/releases)
@@ -24,7 +25,7 @@ Once installed, you'll need a model to work with. Head to the [Obtaining and qua
 Example command:
 
 ```sh
-# Run a local model downloaded from Hugging Face and launch an OpenAI-compatible API server
+# Run a local model weights downloaded from Hugging Face and launch an OpenAI-compatible API server
 docker run --rm -it --gpus all --net=host --ipc=host \
   -v /models:/workspace/models ghcr.io/reft-ai/reft:latest \
   /workspace/reft serve \
