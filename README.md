@@ -2,7 +2,7 @@
 ![reft cc-new-logo jpg](https://github.com/user-attachments/assets/25f0c2e7-0f64-41e9-979d-ddb0ff932c4d)
 
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Release](https://img.shields.io/github/v/release/reft-ai/reft.cpp)](https://github.com/reft-ai/reft.cpp/releases)
 <!--[![Publish](https://github.com/reft-ai/reft.cpp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/reft-ai/reft/actions/workflows/docker-publish.yml))-->
 
@@ -107,7 +107,7 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 </details>
 
 <details>
-	<summary>Chat via App</summary>
+	<summary>Chat via WebUI app</summary>
 
 #### 1. Download and install app
 [DeepChat](https://deepchat.thinkinai.xyz)
