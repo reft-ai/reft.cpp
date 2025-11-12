@@ -18,19 +18,27 @@
 
 ## Quick start
 
-#### Run command
+### 1. Download model weights
+```sh
+mkdir -p models
+hf download deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B --load-dir ./models
+```
+
+### 2. Launch an OpenAI-compatible API server
+
+#### Command
 
 ```sh
-# Run a local model weights downloaded from Hugging Face and launch an OpenAI-compatible API server
 docker run --rm -it --gpus all --net=host --ipc=host \
-  -v /models:/workspace/models ghcr.io/reft-ai/reft:latest \
+  -v ./models:/workspace/models ghcr.io/reft-ai/reft:latest \
   /workspace/reft serve \
   --model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
   --served_model_name DeepSeek-R1-Distill-Qwen-1.5B \
   --chat_template ds-distill-qwen2
 ```
 
-#### Output screenshot
+#### Output
+
 
 ```sh
   ████████████████████████████████████████▏ 100.0% [ 199/ 199 | 476.2 Hz | 0s<0s]  
@@ -53,21 +61,26 @@ docker run --rm -it --gpus all --net=host --ipc=host \
 [2025-11-11 07:02:50.245] [Serve][1] [info] HTTP server listening on 0.0.0.0:8888 ...
 ```
 
-#### Now you can start chatting with the assistant.
+### 3. Start chatting
+<details>
+	<summary>Chat via CLI</summary>
+
+#### Command
 
 ```sh
 curl -Ns http://127.0.0.1:8888/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "DeepSeek-R1-Distill-Qwen-1.5B",
-    "messages": [{"role":"user", "content": "<｜begin▁of▁sentence｜><｜User｜>Who are you?<｜Assistant｜><think>\\n"}],
-    "max_tokens": 24,
-    "temperature": 0.6,
-    "stream": true
+	"model": "DeepSeek-R1-Distill-Qwen-1.5B",
+	"messages": [{"role":"user", "content": "<｜begin▁of▁sentence｜><｜User｜>Who are you?<｜Assistant｜><think>\\n"}],
+	"max_tokens": 24,
+	"temperature": 0.6,
+	"stream": true
   }'
 ```
 
-#### The output will be as follows.
+#### Output
+
 ```text
 data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"DeepSeek-R1-Distill-Qwen-1.5B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
 
@@ -84,20 +97,30 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"DeepSeek-R1-Distill-Qwen-1.5B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 ```
 
-## Description
+</details>
 
-The main goal of `reft.cpp` is to enable LLM/LM inference, training and serving with minimal setup and state-of-the-art performance on a wide
-range of GPUs - on-premises.
+<details>
+	<summary>Chat via App</summary>
 
-- Pure C++ implementation without any dependencies
-- Custom CUDA kernels for running LLMs/LMs on NVIDIA GPUs (support for AMD GPUs via HIP and Moore Threads GPUs via MUSA)
+#### 1. Download and install app
+[DeepChat](https://deepchat.thinkinai.xyz)
+
+#### 2. Setup an OpenAI provider
+<img width="1027" height="631" alt="image" src="https://github.com/user-attachments/assets/47958351-3cd4-4fb7-a806-fa85a3739ccc" />
+
+#### 3. Now, enjoy chatting!
+<img width="1027" height="631" alt="image" src="https://github.com/user-attachments/assets/070e916f-7a28-4b48-bfff-e77e031a6c6d" />
+
+
+</details>
+
 
 ## Supported models
 
 - :white_check_mark: : Done
-- :coffee: : In progress
+- :coffee: : To-Do
 
-### Text-only
+### LLM
 
   | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | MetaX GPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
@@ -108,7 +131,7 @@ range of GPUs - on-premises.
   |[DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
 	
-### Vision
+### Vision LM
 
   | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | MetaX GPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
@@ -116,7 +139,7 @@ range of GPUs - on-premises.
   |[ViT](https://github.com/google-research/vision_transformer)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
 	
 	
-### Audio
+### Audio LM
 
   | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | MetaX GPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
