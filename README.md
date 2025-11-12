@@ -7,8 +7,8 @@
 <!--[![Publish](https://github.com/reft-ai/reft.cpp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/reft-ai/reft/actions/workflows/docker-publish.yml))-->
 
 # What is `reft.cpp`
-### A high-performance and easy-to-use LLM/LM serving tools for inference, training. All of Ops, serving framework and training tools in C++ without Python/PyTorch, inspired by [llm.c](https://github.com/karpathy/llm.c) of Andrej Karpathy.
-### An excutable file of "reft" with model weights are all you need to run the reft-supported model on your GPU(s) with the better performance.
+### A high-performance and easy-to-use LLM/LM serving tools for inference, training. All of Ops/Ops-Fusion/Ops-Optimization, serving framework and training tools in C++ without Python/PyTorch, inspired by [llm.c](https://github.com/karpathy/llm.c) of Andrej Karpathy.
+### An excutable file of "reft" with model weights is all you need to run the reft-supported model on your GPU(s) with the better performance.
 
 ----
 
@@ -82,11 +82,11 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 
 ## Description
 
-The main goal of `reft.cpp` is to enable xLM inference, training and serving with minimal setup and state-of-the-art performance on a wide
+The main goal of `reft.cpp` is to enable LLM/LM inference, training and serving with minimal setup and state-of-the-art performance on a wide
 range of hardware - locally and in the cloud.
 
-- Pure C/C++ implementation without any dependencies
-- Custom CUDA kernels for running xLMs on NVIDIA GPUs (support for AMD GPUs via HIP and Moore Threads GPUs via MUSA)
+- Pure C++ implementation without any dependencies
+- Custom CUDA kernels for running LLMs/LMs on NVIDIA GPUs (support for AMD GPUs via HIP and Moore Threads GPUs via MUSA)
 
 ## Supported models
 
