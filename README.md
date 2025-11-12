@@ -95,7 +95,7 @@ range of hardware - locally and in the cloud.
 
 ### Text-only
 
-  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | Meta GPU |
+  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | MetaX GPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
   |[Qwen2.5-0.5/1.5/3/7/14/32/72B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[Qwen2.5-Math-1.5/7/72B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-math)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
@@ -106,7 +106,7 @@ range of hardware - locally and in the cloud.
 	
 ### Vision
 
-  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | Meta GPU |
+  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | MetaX GPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
   |[SAM](https://github.com/facebookresearch/segment-anything)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
   |[ViT](https://github.com/google-research/vision_transformer)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
@@ -114,7 +114,7 @@ range of hardware - locally and in the cloud.
 	
 ### Audio
 
-  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | Meta GPU |
+  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | MetaX GPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
   |[Whisper](https://huggingface.co/collections/openai/whisper-release)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
   |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
