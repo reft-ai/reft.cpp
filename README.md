@@ -18,13 +18,20 @@
 
 ## Quick start
 
+> #### To deploy and run a LLM/LM with on-premises or cloud GPUs, all you need with reft.cpp is GPUs+Linux+Docker.
+
+<br/>
+
+Example model: `deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B`
+
 ### 1. Download model weights
+
 ```sh
 mkdir -p models
 hf download deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B --load-dir ./models
 ```
 
-### 2. Launch an OpenAI-compatible API server
+### 2. Download and launch `reft` (OpenAI-compatible API server)
 
 #### Command
 
@@ -38,7 +45,6 @@ docker run --rm -it --gpus all --net=host --ipc=host \
 ```
 
 #### Output
-
 
 ```sh
   ████████████████████████████████████████▏ 100.0% [ 199/ 199 | 476.2 Hz | 0s<0s]  
@@ -62,6 +68,7 @@ docker run --rm -it --gpus all --net=host --ipc=host \
 ```
 
 ### 3. Start chatting
+
 <details>
 	<summary>Chat via CLI</summary>
 
@@ -110,7 +117,6 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 
 #### 3. Now, enjoy chatting!
 <img width="1027" height="631" alt="image" src="https://github.com/user-attachments/assets/070e916f-7a28-4b48-bfff-e77e031a6c6d" />
-
 
 </details>
 
