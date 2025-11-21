@@ -16,6 +16,411 @@
 
 ----
 
+
+# Supported Models
+
+## DeepSeek
+
+* ### DeepSeek-R1
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X8</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-H200 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1 \
+		--served_model_name DeepSeek-R1 \
+		--chat_template ds-r1 \
+ 		--tp_size 8 \
+ 		--world_size 8
+	```
+	</details>
+
+* ### DeepSeek-V3
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X8</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-V3-H200 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-V3 \
+		--served_model_name DeepSeek-V3 \
+		--chat_template ds-v3 \
+ 		--tp_size 8 \
+ 		--world_size 8
+	```
+	</details>
+
+
+* ### DeepSeek-R1-Distill-Qwen-1.5B
+  	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-1.5B-RTX3060 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
+		--served_model_name DeepSeek-R1-Distill-Qwen-1.5B \
+		--chat_template ds-distill-qwen2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-1.5B-RTX4090 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
+		--served_model_name DeepSeek-R1-Distill-Qwen-1.5B \
+		--chat_template ds-distill-qwen2
+	```
+	</details>
+	
+* ### DeepSeek-R1-Distill-Qwen-7B
+
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X2</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-7B-RTX3060 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B \
+		--served_model_name DeepSeek-R1-Distill-Qwen-7B \
+		--chat_template ds-distill-qwen2 \
+ 		--tp_size 2 \
+ 		--world_size 2
+	```
+	</details>
+
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-7B-RTX4090 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B \
+		--served_model_name DeepSeek-R1-Distill-Qwen-7B \
+		--chat_template ds-distill-qwen2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-7B-A800 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B \
+		--served_model_name DeepSeek-R1-Distill-Qwen-7B \
+		--chat_template ds-distill-qwen2
+	```
+	</details>
+
+* ### DeepSeek-R1-Distill-Qwen-14B
+
+  	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX4090(24GB) X2</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-14B-RTX4090 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B \
+		--served_model_name DeepSeek-R1-Distill-Qwen-14B \
+		--chat_template ds-distill-qwen2 \
+ 		--tp_size 2 \
+ 		--world_size 2
+	```
+	</details>
+
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-14B-H200 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B \
+		--served_model_name DeepSeek-R1-Distill-Qwen-14B \
+		--chat_template ds-distill-qwen2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-14B-A800 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B \
+		--served_model_name DeepSeek-R1-Distill-Qwen-14B \
+		--chat_template ds-distill-qwen2
+	```
+	</details>
+
+* ### DeepSeek-R1-Distill-Qwen-32B
+
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-32B-H200 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B \
+		--served_model_name DeepSeek-R1-Distill-Qwen-32B \
+		--chat_template ds-distill-qwen2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-32B-A800 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B \
+		--served_model_name DeepSeek-R1-Distill-Qwen-32B \
+		--chat_template ds-distill-qwen2
+	```
+	</details>
+
+
+# Qwen
+
+* ### Qwen2.5-0.5B-Instruct
+
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-0.5B-Instruct-RTX3060 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-0.5B-Instruct \
+		--served_model_name Qwen2.5-0.5B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-0.5B-Instruct-RTX4090 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-0.5B-Instruct \
+		--served_model_name Qwen2.5-0.5B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+
+* ### Qwen2.5-1.5B-Instruct
+
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-1.5B-Instruct-RTX3060 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-1.5B-Instruct \
+		--served_model_name Qwen2.5-1.5B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-1.5B-Instruct-RTX4090 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-1.5B-Instruct \
+		--served_model_name Qwen2.5-1.5B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+
+* ### Qwen2.5-3B-Instruct
+
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-3B-Instruct-RTX3060 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-3B-Instruct \
+		--served_model_name Qwen2.5-3B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-3B-Instruct-RTX4090 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-3B-Instruct \
+		--served_model_name Qwen2.5-3B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+
+* ### Qwen2.5-7B-Instruct
+
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X2</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-7B-Instruct-RTX3060 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-7B-Instruct \
+		--served_model_name Qwen2.5-7B-Instruct \
+		--chat_template qwen2 \
+ 		--tp_size 2 \
+ 		--world_size 2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-7B-Instruct-RTX4090 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-7B-Instruct \
+		--served_model_name Qwen2.5-7B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+
+* ### Qwen2.5-14B-Instruct
+
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X2</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-14B-Instruct-RTX4090 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-14B-Instruct \
+		--served_model_name Qwen2.5-14B-Instruct \
+		--chat_template qwen2 \
+ 		--tp_size 2 \
+ 		--world_size 2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-14B-Instruct-H200 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-14B-Instruct \
+		--served_model_name Qwen2.5-14B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-14B-Instruct-A800 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-14B-Instruct \
+		--served_model_name Qwen2.5-14B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+
+* ### Qwen2.5-32B-Instruct
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-32B-Instruct-H200 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-32B-Instruct \
+		--served_model_name Qwen2.5-32B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X1</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-32B-Instruct-A800 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-32B-Instruct \
+		--served_model_name Qwen2.5-32B-Instruct \
+		--chat_template qwen2
+	```
+	</details>
+
+* ### Qwen2.5-72B-Instruct
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X2</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-72B-Instruct-H200 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-72B-Instruct \
+		--served_model_name Qwen2.5-72B-Instruct \
+		--chat_template qwen2 \
+ 		--tp_size 2 \
+ 		--world_size 2
+	```
+	</details>
+	
+	<details>
+		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X2</summary>
+	
+	```sh
+	docker run --rm -it --gpus all --net=host --ipc=host \
+		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-72B-Instruct-A800 \
+		reft-server \
+		--model /workspace/models/deepseek-ai/Qwen2.5-72B-Instruct \
+		--served_model_name Qwen2.5-72B-Instruct \
+		--chat_template qwen2 \
+		--tp_size 2 \
+ 		--world_size 2
+	```
+	</details>
+
+
+----
+
 ## Quick start
 
 > #### To deploy and run a LLM/LM with on-premises or cloud GPUs, all you need with reft.cpp is GPUs+Linux+Docker.
