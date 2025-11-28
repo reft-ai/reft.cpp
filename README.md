@@ -14,429 +14,26 @@
 
 - Our deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset vendors, AIDC, who are seeking for the better performance, cost-efficient, easy-to-use of LLM/LMs.
 
-----
 
 
-# Supported Models
 
-## DeepSeek
+# Quick start
 
-* ### DeepSeek-R1
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X8</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-H200 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1 \
-		--served_model_name DeepSeek-R1 \
-		--chat_template ds-r1 \
- 		--tp_size 8 \
- 		--world_size 8
-	```
-	</details>
-
-* ### DeepSeek-V3
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X8</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-V3-H200 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-V3 \
-		--served_model_name DeepSeek-V3 \
-		--chat_template ds-v3 \
- 		--tp_size 8 \
- 		--world_size 8
-	```
-	</details>
-
-
-* ### DeepSeek-R1-Distill-Qwen-1.5B
-  	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-1.5B-RTX3060 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
-		--served_model_name DeepSeek-R1-Distill-Qwen-1.5B \
-		--chat_template ds-distill-qwen2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-1.5B-RTX4090 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
-		--served_model_name DeepSeek-R1-Distill-Qwen-1.5B \
-		--chat_template ds-distill-qwen2
-	```
-	</details>
-	
-* ### DeepSeek-R1-Distill-Qwen-7B
-
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X2</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-7B-RTX3060 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B \
-		--served_model_name DeepSeek-R1-Distill-Qwen-7B \
-		--chat_template ds-distill-qwen2 \
- 		--tp_size 2 \
- 		--world_size 2
-	```
-	</details>
-
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-7B-RTX4090 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B \
-		--served_model_name DeepSeek-R1-Distill-Qwen-7B \
-		--chat_template ds-distill-qwen2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-7B-A800 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B \
-		--served_model_name DeepSeek-R1-Distill-Qwen-7B \
-		--chat_template ds-distill-qwen2
-	```
-	</details>
-
-* ### DeepSeek-R1-Distill-Qwen-14B
-
-  	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX4090(24GB) X2</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-14B-RTX4090 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B \
-		--served_model_name DeepSeek-R1-Distill-Qwen-14B \
-		--chat_template ds-distill-qwen2 \
- 		--tp_size 2 \
- 		--world_size 2
-	```
-	</details>
-
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-14B-H200 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B \
-		--served_model_name DeepSeek-R1-Distill-Qwen-14B \
-		--chat_template ds-distill-qwen2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-14B-A800 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B \
-		--served_model_name DeepSeek-R1-Distill-Qwen-14B \
-		--chat_template ds-distill-qwen2
-	```
-	</details>
-
-* ### DeepSeek-R1-Distill-Qwen-32B
-
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-32B-H200 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B \
-		--served_model_name DeepSeek-R1-Distill-Qwen-32B \
-		--chat_template ds-distill-qwen2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-DeepSeek-R1-Distill-Qwen-32B-A800 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B \
-		--served_model_name DeepSeek-R1-Distill-Qwen-32B \
-		--chat_template ds-distill-qwen2
-	```
-	</details>
-
-
-# Qwen
-
-* ### Qwen2.5-0.5B-Instruct
-
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-0.5B-Instruct-RTX3060 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-0.5B-Instruct \
-		--served_model_name Qwen2.5-0.5B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-0.5B-Instruct-RTX4090 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-0.5B-Instruct \
-		--served_model_name Qwen2.5-0.5B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-
-* ### Qwen2.5-1.5B-Instruct
-
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-1.5B-Instruct-RTX3060 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-1.5B-Instruct \
-		--served_model_name Qwen2.5-1.5B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-1.5B-Instruct-RTX4090 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-1.5B-Instruct \
-		--served_model_name Qwen2.5-1.5B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-
-* ### Qwen2.5-3B-Instruct
-
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-3B-Instruct-RTX3060 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-3B-Instruct \
-		--served_model_name Qwen2.5-3B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-3B-Instruct-RTX4090 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-3B-Instruct \
-		--served_model_name Qwen2.5-3B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-
-* ### Qwen2.5-7B-Instruct
-
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 3060(12GB) X2</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-7B-Instruct-RTX3060 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-7B-Instruct \
-		--served_model_name Qwen2.5-7B-Instruct \
-		--chat_template qwen2 \
- 		--tp_size 2 \
- 		--world_size 2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-7B-Instruct-RTX4090 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-7B-Instruct \
-		--served_model_name Qwen2.5-7B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-
-* ### Qwen2.5-14B-Instruct
-
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA RTX 4090(24GB) X2</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-14B-Instruct-RTX4090 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-14B-Instruct \
-		--served_model_name Qwen2.5-14B-Instruct \
-		--chat_template qwen2 \
- 		--tp_size 2 \
- 		--world_size 2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-14B-Instruct-H200 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-14B-Instruct \
-		--served_model_name Qwen2.5-14B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-14B-Instruct-A800 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-14B-Instruct \
-		--served_model_name Qwen2.5-14B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-
-* ### Qwen2.5-32B-Instruct
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-32B-Instruct-H200 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-32B-Instruct \
-		--served_model_name Qwen2.5-32B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X1</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-32B-Instruct-A800 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-32B-Instruct \
-		--served_model_name Qwen2.5-32B-Instruct \
-		--chat_template qwen2
-	```
-	</details>
-
-* ### Qwen2.5-72B-Instruct
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA H200(141GB) X2</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-72B-Instruct-H200 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-72B-Instruct \
-		--served_model_name Qwen2.5-72B-Instruct \
-		--chat_template qwen2 \
- 		--tp_size 2 \
- 		--world_size 2
-	```
-	</details>
-	
-	<details>
-		<summary>&nbsp;&nbsp;NVIDIA A800(80GB) X2</summary>
-	
-	```sh
-	docker run --rm -it --gpus all --net=host --ipc=host \
-		-v /models:/workspace/models ghcr.io/reft-ai/reft:1.0.0-Qwen2.5-72B-Instruct-A800 \
-		reft-server \
-		--model /workspace/models/deepseek-ai/Qwen2.5-72B-Instruct \
-		--served_model_name Qwen2.5-72B-Instruct \
-		--chat_template qwen2 \
-		--tp_size 2 \
- 		--world_size 2
-	```
-	</details>
-
-
-----
-
-## Quick start
-
-> #### To deploy and run a LLM/LM with on-premises or cloud GPUs, all you need with reft.cpp is GPUs+Linux+Docker.
+> To run a LLM/LM on your on-premises or cloud GPUs, all you need is a Reft .exe and weights without PyTorch/Python or related.
 
 <br/>
 
-Example model: `deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B`
+Example model: `Qwen3/Qwen3-4B`
 
-### 1. Download model weights
+
+## 1. Download reft .exe and weights
 
 ```sh
 mkdir -p models
-hf download deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B --load-dir ./models
+hf download Qwen3/Qwen3-4B --load-dir ./models
 ```
 
-### 2. Download and launch `reft` (OpenAI-compatible API server)
+## 2. Run LLM
 
 #### Command
 
@@ -444,9 +41,9 @@ hf download deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B --load-dir ./models
 docker run --rm -it --gpus all --net=host --ipc=host \
   -v ./models:/workspace/models ghcr.io/reft-ai/reft:latest \
   /workspace/reft serve \
-  --model /workspace/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
-  --served_model_name DeepSeek-R1-Distill-Qwen-1.5B \
-  --chat_template ds-distill-qwen2
+  --model /workspace/models/Qwen3/Qwen3-4B \
+  --served_model_name Qwen3-4B \
+  --chat_template qwen3
 ```
 
 #### Output
@@ -472,18 +69,20 @@ docker run --rm -it --gpus all --net=host --ipc=host \
 [2025-11-11 07:02:50.245] [Serve][1] [info] HTTP server listening on 0.0.0.0:8888 ...
 ```
 
-### 3. Start chatting
+### 2.1 Chat via WebUI
 
-<details>
-	<summary>Chat via CLI</summary>
+Open url: http://127.0.0.1:8888/ui.html
 
-#### Command
+
+### 2.2 Chat via CLI
+
+##### Command
 
 ```sh
 curl -Ns http://127.0.0.1:8888/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-	"model": "DeepSeek-R1-Distill-Qwen-1.5B",
+	"model": "Qwen3-4B",
 	"messages": [{"role":"user", "content": "<｜begin▁of▁sentence｜><｜User｜>Who are you?<｜Assistant｜><think>\\n"}],
 	"max_tokens": 24,
 	"temperature": 0.6,
@@ -491,39 +90,25 @@ curl -Ns http://127.0.0.1:8888/v1/chat/completions \
   }'
 ```
 
-#### Output
+##### Output
 
 ```text
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"DeepSeek-R1-Distill-Qwen-1.5B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"DeepSeek-R1-Distill-Qwen-1.5B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Greetings"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Greetings"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"DeepSeek-R1-Distill-Qwen-1.5B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"!"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"!"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"DeepSeek-R1-Distill-Qwen-1.5B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" I"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" I"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"DeepSeek-R1-Distill-Qwen-1.5B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"'m"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"'m"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"DeepSeek-R1-Distill-Qwen-1.5B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" Deep"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" Deep"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"DeepSeek-R1-Distill-Qwen-1.5B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+
+...
 ```
-
-</details>
-
-<details>
-	<summary>Chat via WebUI app</summary>
-
-#### 1. Download and install app
-[DeepChat](https://deepchat.thinkinai.xyz)
-
-#### 2. Setup an OpenAI provider
-<img width="1027" height="631" alt="image" src="https://github.com/user-attachments/assets/47958351-3cd4-4fb7-a806-fa85a3739ccc" />
-
-#### 3. Now, enjoy chatting!
-<img width="1027" height="631" alt="image" src="https://github.com/user-attachments/assets/070e916f-7a28-4b48-bfff-e77e031a6c6d" />
-
-</details>
 
 
 ## Supported models
@@ -535,12 +120,15 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 
   | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | MetaX GPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[Qwen2.5-0.5/1.5/3/7/14/32/72B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen2.5-Math-1.5/7/72B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-math)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen2.5-Coder-0.5/1.5/3/7/14/32B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-0.6B/1.7B/4B/8B)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-30B-A3B/235B-A22B)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Llama3.1-8B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Llama3.2-1B/3B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[GPT-OSS-20B/120B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+
 	
 ### Vision LM
 
@@ -548,6 +136,9 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
   |[SAM](https://github.com/facebookresearch/segment-anything)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
   |[ViT](https://github.com/google-research/vision_transformer)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[Qwen3-VL-2B/4B/8B/32B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-VL-30B-A3B/235B-A22B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  
 	
 	
 ### Audio LM
