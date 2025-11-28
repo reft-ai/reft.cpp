@@ -25,10 +25,10 @@
 
   | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[Qwen3-0.6B/1.7B/4B/4B-Base-2507/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama3.1-8B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama3.2-1B/3B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-0.6B/1.7B/4B/4B-Base-2507/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Llama3.1-8B/8B-Instruct](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Llama3.2-1B/1B-Instruct/3B/3B-Instruct](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
@@ -41,8 +41,8 @@
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
   |[SAM](https://github.com/facebookresearch/segment-anything)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
   |[ViT](https://github.com/google-research/vision_transformer)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[Qwen3-VL-2B/4B/4B-Instruct/8B/8B-Instruct/32B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen3-VL-30B-A3B/235B-A22B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-VL-2B/4B/4B-Instruct/8B/8B-Instruct/32B](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-VL-30B-A3B/235B-A22B](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   
 	
 	
