@@ -118,10 +118,10 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 
 ### LLM
 
-  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | MetaX GPU |
+  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[Qwen3-0.6B/1.7B/4B/8B)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen3-30B-A3B/235B-A22B)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-0.6B/1.7B/4B/4B-Base-2507/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[Llama3.1-8B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[Llama3.2-1B/3B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
@@ -132,18 +132,18 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 	
 ### Vision LM
 
-  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | MetaX GPU |
+  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
   |[SAM](https://github.com/facebookresearch/segment-anything)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
   |[ViT](https://github.com/google-research/vision_transformer)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[Qwen3-VL-2B/4B/8B/32B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-VL-2B/4B/4B-Instruct/8B/8B-Instruct/32B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[Qwen3-VL-30B-A3B/235B-A22B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
   
 	
 	
 ### Audio LM
 
-  | Models                | Nvidia GPU | AMD GPU | Hexagon NPU | Moore Threads GPU | MetaX GPU |
+  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
   |[Whisper](https://huggingface.co/collections/openai/whisper-release)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
   |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
