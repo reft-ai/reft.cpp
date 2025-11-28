@@ -16,8 +16,46 @@
 
 
 
+## Supported models
 
-# Quick start
+- :white_check_mark: : Done
+- :coffee: : To-Do
+
+### LLM
+
+  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
+  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
+  |[Qwen3-0.6B/1.7B/4B/4B-Base-2507/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Llama3.1-8B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Llama3.2-1B/3B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[GPT-OSS-20B/120B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+
+	
+### Vision LM
+
+  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
+  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
+  |[SAM](https://github.com/facebookresearch/segment-anything)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[ViT](https://github.com/google-research/vision_transformer)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[Qwen3-VL-2B/4B/4B-Instruct/8B/8B-Instruct/32B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-VL-30B-A3B/235B-A22B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  
+	
+	
+### Audio LM
+
+  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
+  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
+  |[Whisper](https://huggingface.co/collections/openai/whisper-release)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[MeloTTS-English/...](https://huggingface.co/myshell-ai/MeloTTS-English)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+
+
+# Install and Run LLM
 
 > To run a LLM/LM on your on-premises or cloud GPUs, all you need is a Reft .exe and weights without PyTorch/Python or related.
 
@@ -110,41 +148,3 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 ...
 ```
 
-
-## Supported models
-
-- :white_check_mark: : Done
-- :coffee: : To-Do
-
-### LLM
-
-  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
-  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[Qwen3-0.6B/1.7B/4B/4B-Base-2507/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507)](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama3.1-8B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama3.2-1B/3B(-Instruct)](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[GPT-OSS-20B/120B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-
-	
-### Vision LM
-
-  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
-  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[SAM](https://github.com/facebookresearch/segment-anything)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[ViT](https://github.com/google-research/vision_transformer)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[Qwen3-VL-2B/4B/4B-Instruct/8B/8B-Instruct/32B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen3-VL-30B-A3B/235B-A22B)](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  
-	
-	
-### Audio LM
-
-  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
-  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[Whisper](https://huggingface.co/collections/openai/whisper-release)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[MeloTTS-English/...](https://huggingface.co/myshell-ai/MeloTTS-English)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
