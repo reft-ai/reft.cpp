@@ -25,24 +25,24 @@
 
   | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[Qwen3-0.6B/1.7B/4B/4B-Base-2507/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507](https://huggingface.co/collections/Qwen/qwen3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama3.1-8B/8B-Instruct](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama3.2-1B/1B-Instruct/3B/3B-Instruct](https://huggingface.co/collections/Qwen/qwen25-coder)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[GPT-OSS-20B/120B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-0.6B/1.7B/4B/4B-Base-2507/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base](https://huggingface.co/collections/Qwen/qwen3)|RTX4090(24GB) <br/> A800(80GB) <br/> H200(141GB) <br/> :white_check_mark: <br/> [Download](#11-download-reft-docker-image)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507](https://huggingface.co/collections/Qwen/qwen3)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Llama3.1-8B/8B-Instruct](https://huggingface.co/collections/Qwen/qwen25-coder)|RTX4090(24GB) <br/> A800(80GB) <br/> H200(141GB) <br/> :white_check_mark: <br/>  [Download](#11-download-reft-docker-image)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Llama3.2-1B/1B-Instruct/3B/3B-Instruct](https://huggingface.co/collections/Qwen/qwen25-coder)|RTX4090(24GB) <br/> A800(80GB) <br/> H200(141GB) <br/> :white_check_mark: <br/>  [Download](#11-download-reft-docker-image)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|RTX4090(24GB) <br/> A800(80GB) <br/> H200(141GB) <br/>  :white_check_mark: <br/>  [Download](#11-download-reft-docker-image)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[GPT-OSS-20B/120B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
 
 	
 ### Vision LM
 
   | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[SAM](https://github.com/facebookresearch/segment-anything)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[ViT](https://github.com/google-research/vision_transformer)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[Qwen3-VL-2B/4B/4B-Instruct/8B/8B-Instruct/32B](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen3-VL-30B-A3B/235B-A22B](https://huggingface.co/collections/Qwen/qwen3-vl)|:white_check_mark:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[SAM](https://github.com/facebookresearch/segment-anything)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[ViT](https://github.com/google-research/vision_transformer)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[Qwen3-VL-2B/4B/4B-Instruct/8B/8B-Instruct/32B](https://huggingface.co/collections/Qwen/qwen3-vl)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-VL-30B-A3B/235B-A22B](https://huggingface.co/collections/Qwen/qwen3-vl)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
   
 	
 	
@@ -50,9 +50,9 @@
 
   | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[Whisper](https://huggingface.co/collections/openai/whisper-release)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[MeloTTS-English/...](https://huggingface.co/myshell-ai/MeloTTS-English)| :white_check_mark: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[Whisper](https://huggingface.co/collections/openai/whisper-release)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
+  |[MeloTTS-English/...](https://huggingface.co/myshell-ai/MeloTTS-English)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
 
 
 # Install and Run LLM
@@ -63,10 +63,62 @@
 
 Example model: `Qwen3/Qwen3-4B`
 
+#
+
+
 
 ## 1. Download reft .exe and weights
 
-```sh
+
+### 1.1 Download reft docker image
+
+```bash
+# Qwen3/Qwen3-0.6B
+docker pull ghcr.io/reft-ai/reft:qwen3-0.6b
+
+# Qwen3/Qwen3-1.7B
+docker pull ghcr.io/reft-ai/reft:qwen3-1.7b
+
+# Qwen3/Qwen3-4B
+docker pull ghcr.io/reft-ai/reft:qwen3-4b
+
+# Qwen3/Qwen3-4B-Base-2507
+docker pull ghcr.io/reft-ai/reft:qwen3-4b
+
+# Qwen3/Qwen3-4B-Instruct-2507
+docker pull ghcr.io/reft-ai/reft:qwen3-4b
+
+# Qwen3/Qwen3-4B-Thinking-2507
+docker pull ghcr.io/reft-ai/reft:qwen3-4b
+
+# Qwen3/Qwen3-8B
+docker pull ghcr.io/reft-ai/reft:qwen3-8b
+
+# Qwen3/Qwen3-8B-Base
+docker pull ghcr.io/reft-ai/reft:qwen3-8b
+
+# Llama/Llama-3.1-8B
+docker pull ghcr.io/reft-ai/reft:llama-3.1-8b
+
+# Llama/Llama-3.1-8B-Instruct
+docker pull ghcr.io/reft-ai/reft:llama-3.1-8b
+
+# Llama/Llama-3.2-1B
+docker pull ghcr.io/reft-ai/reft:llama-3.2-1b
+
+# Llama/Llama-3.2-1B-Instruct
+docker pull ghcr.io/reft-ai/reft:llama-3.2-1b
+
+# Llama/Llama-3.2-3B
+docker pull ghcr.io/reft-ai/reft:llama-3.2-3b
+
+# Llama/Llama-3.2-3B-Instruct
+docker pull ghcr.io/reft-ai/reft:llama-3.2-3b
+```
+
+### 1.2 Download model weights from HuggingFace
+
+```bash
 mkdir -p models
 hf download Qwen3/Qwen3-4B --load-dir ./models
 ```
