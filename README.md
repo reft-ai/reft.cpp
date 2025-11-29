@@ -23,6 +23,208 @@
 
 ### LLM
 
+#### QWEN
+
+<table>
+	<thead>
+		<tr>
+			<th>
+				<strong>Architecture</strong>
+			</th>
+			<th>
+				<strong>Model</strong>
+			</th>
+			<th>
+				<strong>Device</strong>
+			</th>
+			<th>
+				<strong>Release Tag</strong>
+			</th>
+			<th>
+				<strong>HuggingFace Model</strong>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!--------------------- Qwen3/Qwen3-0.6B --------------------->
+		<tr>
+			<td align="center" rowspan="4">
+				<strong>Qwen3</strong>
+			</td>
+			<td align="center">
+				Qwen3-0.6B
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td>Nvidia GPU</td>
+						<td>
+							<table>
+								<tr><td>RTX 3060(12GB) x1</td></tr>
+								<tr><td>RTX 4090(24GB) x1</td></tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>AMD GPU</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Qualcomm Hexagon</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Huawei Asend</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Apple NPU</td>
+						<td>TBD</td>
+					</tr>
+				</table>
+			</td>
+			<td align="center">
+				qwen3-0.6b
+			</td>
+			<td align="center">
+				<a href=https://huggingface.co/Qwen3/Qwen3-0.6B target="_blank">Qwen3-0.6B</a>
+			</td>
+		</tr>
+		<!--------------------- Qwen3/Qwen3-1.7B --------------------->
+		<tr>
+			<td align="center">
+				Qwen3-1.7B
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td>Nvidia GPU</td>
+						<td>
+							<table>
+								<tr><td>RTX 3060(12GB) x1</td></tr>
+								<tr><td>RTX 4090(24GB) x1</td></tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>AMD GPU</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Qualcomm Hexagon</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Huawei Asend</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Apple NPU</td>
+						<td>TBD</td>
+					</tr>
+				</table>
+			</td>
+			<td align="center">
+				qwen3-1.7b
+			</td>
+			<td align="center">
+				<a href=https://huggingface.co/Qwen3/Qwen3-1.7B target="_blank">Qwen3-1.7B</a>
+			</td>
+		</tr>
+		<!--------------------- Qwen3/Qwen3-4B --------------------->
+		<tr>
+			<td align="center">
+				Qwen3-4B <br/>
+				Qwen3-4B-Base-2507 <br/>
+				Qwen3-4B-Instruct-2507 <br/>
+				Qwen3-4B-Thinking-2507
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td>Nvidia GPU</td>
+						<td>
+							<table>
+								<tr><td>RTX 3060(12GB) x1</td></tr>
+								<tr><td>RTX 4090(24GB) x1</td></tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>AMD GPU</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Qualcomm Hexagon</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Huawei Asend</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Apple NPU</td>
+						<td>TBD</td>
+					</tr>
+				</table>
+			</td>
+			<td align="center">
+				qwen3-4b
+			</td>
+			<td align="center">
+				<a href=https://huggingface.co/Qwen3/Qwen3-4B target="_blank">Qwen3-4B</a> <br/>
+				<a href=https://huggingface.co/Qwen3/Qwen3-4B-Base-2507 target="_blank">Qwen3-4B-Base-2507</a> <br/>
+				<a href=https://huggingface.co/Qwen3/Qwen3-4B-Instruct-2507 target="_blank">Qwen3-4B-Instruct-2507</a> <br/>
+				<a href=https://huggingface.co/Qwen3/Qwen3-4B-Thinking-2507 target="_blank">Qwen3-4B-Thinking-2507</a>
+			</td>
+		</tr>
+		<!--------------------- Qwen3/Qwen3-8B --------------------->
+		<tr>
+			<td align="center">
+				Qwen3-8B <br/>
+				Qwen3-8B-Base
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td>Nvidia GPU</td>
+						<td>
+							<table>
+								<tr><td>RTX 3060(12GB) x1</td></tr>
+								<tr><td>RTX 4090(24GB) x1</td></tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>AMD GPU</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Qualcomm Hexagon</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Huawei Asend</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Apple NPU</td>
+						<td>TBD</td>
+					</tr>
+				</table>
+			</td>
+			<td align="center">
+				qwen3-8b
+			</td>
+			<td align="center">
+				<a href=https://huggingface.co/Qwen3/Qwen3-8B target="_blank">Qwen3-8B</a> <br/>
+				<a href=https://huggingface.co/Qwen3/Qwen3-8B-Base target="_blank">Qwen3-8B-Base</a> <br/>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
   | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
   |[Qwen3-0.6B/1.7B/4B/4B-Base-2507/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base](https://huggingface.co/collections/Qwen/qwen3)|RTX4090(24GB) <br/> A800(80GB) <br/> H200(141GB) <br/> :white_check_mark: <br/> [Download](#11-download-reft-docker-image)|:coffee:|:coffee:|:coffee:|:coffee:|
@@ -73,47 +275,8 @@ Example model: `Qwen3/Qwen3-4B`
 ### 1.1 Download reft docker image
 
 ```bash
-# Qwen3/Qwen3-0.6B
-docker pull ghcr.io/reft-ai/reft:qwen3-0.6b
-
-# Qwen3/Qwen3-1.7B
-docker pull ghcr.io/reft-ai/reft:qwen3-1.7b
-
 # Qwen3/Qwen3-4B
 docker pull ghcr.io/reft-ai/reft:qwen3-4b
-
-# Qwen3/Qwen3-4B-Base-2507
-docker pull ghcr.io/reft-ai/reft:qwen3-4b
-
-# Qwen3/Qwen3-4B-Instruct-2507
-docker pull ghcr.io/reft-ai/reft:qwen3-4b
-
-# Qwen3/Qwen3-4B-Thinking-2507
-docker pull ghcr.io/reft-ai/reft:qwen3-4b
-
-# Qwen3/Qwen3-8B
-docker pull ghcr.io/reft-ai/reft:qwen3-8b
-
-# Qwen3/Qwen3-8B-Base
-docker pull ghcr.io/reft-ai/reft:qwen3-8b
-
-# Llama/Llama-3.1-8B
-docker pull ghcr.io/reft-ai/reft:llama-3.1-8b
-
-# Llama/Llama-3.1-8B-Instruct
-docker pull ghcr.io/reft-ai/reft:llama-3.1-8b
-
-# Llama/Llama-3.2-1B
-docker pull ghcr.io/reft-ai/reft:llama-3.2-1b
-
-# Llama/Llama-3.2-1B-Instruct
-docker pull ghcr.io/reft-ai/reft:llama-3.2-1b
-
-# Llama/Llama-3.2-3B
-docker pull ghcr.io/reft-ai/reft:llama-3.2-3b
-
-# Llama/Llama-3.2-3B-Instruct
-docker pull ghcr.io/reft-ai/reft:llama-3.2-3b
 ```
 
 ### 1.2 Download model weights from HuggingFace
