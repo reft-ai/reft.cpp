@@ -224,13 +224,168 @@
 	</tbody>
 </table>
 
+#### LLAMA
+
+<table>
+	<thead>
+		<tr>
+			<th>
+				<strong>Architecture</strong>
+			</th>
+			<th>
+				<strong>Model</strong>
+			</th>
+			<th>
+				<strong>Device</strong>
+			</th>
+			<th>
+				<strong>Release Tag</strong>
+			</th>
+			<th>
+				<strong>HuggingFace Model</strong>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!--------------------- Llama/Llama-3.2-1B --------------------->
+		<tr>
+			<td align="center" rowspan="3">
+				<strong>Llama</strong>
+			</td>
+			<td align="center">
+				Llama-3.2-1B <br/>
+				Llama-3.2-1B-Instruct
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td>Nvidia GPU</td>
+						<td>
+							<table>
+								<tr><td>RTX 3060(12GB) x1</td></tr>
+								<tr><td>RTX 4090(24GB) x1</td></tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>AMD GPU</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Qualcomm Hexagon</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Huawei Asend</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Apple NPU</td>
+						<td>TBD</td>
+					</tr>
+				</table>
+			</td>
+			<td align="center">
+				llama-3.2-1b
+			</td>
+			<td align="center">
+				<a href=https://huggingface.co/meta-llama/Llama-3.2-1B target="_blank">Llama-3.2-1B</a> <br/>
+				<a href=https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct target="_blank">Llama-3.2-1B-Instruct</a>
+			</td>
+		</tr>
+		<!--------------------- Llama/Llama-3.2-3B --------------------->
+		<tr>
+			<td align="center">
+				Llama-3.2-3B <br/>
+				Llama-3.2-3B-Instruct
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td>Nvidia GPU</td>
+						<td>
+							<table>
+								<tr><td>RTX 3060(12GB) x1</td></tr>
+								<tr><td>RTX 4090(24GB) x1</td></tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>AMD GPU</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Qualcomm Hexagon</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Huawei Asend</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Apple NPU</td>
+						<td>TBD</td>
+					</tr>
+				</table>
+			</td>
+			<td align="center">
+				llama-3.2-3b
+			</td>
+			<td align="center">
+				<a href=https://huggingface.co/meta-llama/Llama-3.2-3B target="_blank">Llama-3.2-3B</a> <br/>
+				<a href=https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct target="_blank">Llama-3.2-3B-Instruct</a>
+			</td>
+		</tr>
+		<!--------------------- Llama/Llama-3.1-8B --------------------->
+		<tr>
+			<td align="center">
+				Llama-3.1-8B <br/>
+				Llama-3.1-8B-Instruct
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td>Nvidia GPU</td>
+						<td>
+							<table>
+								<tr><td>RTX 3060(12GB) x1</td></tr>
+								<tr><td>RTX 4090(24GB) x1</td></tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>AMD GPU</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Qualcomm Hexagon</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Huawei Asend</td>
+						<td>TBD</td>
+					</tr>
+					<tr>
+						<td>Apple NPU</td>
+						<td>TBD</td>
+					</tr>
+				</table>
+			</td>
+			<td align="center">
+				llama-3.1-8b
+			</td>
+			<td align="center">
+				<a href=https://huggingface.co/meta-llama/Llama-3.1-8B target="_blank">Llama-3.1-8B</a> <br/>
+				<a href=https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct target="_blank">Llama-3.1-8B-Instruct</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
 
   | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[Qwen3-0.6B/1.7B/4B/4B-Base-2507/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base](https://huggingface.co/collections/Qwen/qwen3)|RTX4090(24GB) <br/> A800(80GB) <br/> H200(141GB) <br/> :white_check_mark: <br/> [Download](#11-download-reft-docker-image)|:coffee:|:coffee:|:coffee:|:coffee:|
   |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507](https://huggingface.co/collections/Qwen/qwen3)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama3.1-8B/8B-Instruct](https://huggingface.co/collections/Qwen/qwen25-coder)|RTX4090(24GB) <br/> A800(80GB) <br/> H200(141GB) <br/> :white_check_mark: <br/>  [Download](#11-download-reft-docker-image)|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama3.2-1B/1B-Instruct/3B/3B-Instruct](https://huggingface.co/collections/Qwen/qwen25-coder)|RTX4090(24GB) <br/> A800(80GB) <br/> H200(141GB) <br/> :white_check_mark: <br/>  [Download](#11-download-reft-docker-image)|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
   |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|RTX4090(24GB) <br/> A800(80GB) <br/> H200(141GB) <br/>  :white_check_mark: <br/>  [Download](#11-download-reft-docker-image)|:coffee:|:coffee:|:coffee:|:coffee:|
