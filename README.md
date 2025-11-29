@@ -8,12 +8,11 @@
 
 # What is `reft.cpp`
 
-- A high-performance and easy-to-use LLM/LM serving tools for inference, training. All of Ops/Ops-Fusion/Ops-Optimization, serving framework and training tools in C++ without Python/PyTorch, inspired by [llm.c](https://github.com/karpathy/llm.c) of Andrej Karpathy.
+A high-performance and easy-to-use LLM/LM serving tools for both Inference and Training. 
+  - 20%+ higher Inference and Training performance than other LLM deployments. All of Ops/Ops-Fusion/Ops-Optimization, serving framework and training tools in C++ without Python/PyTorch, inspired by [llm.c](https://github.com/karpathy/llm.c) of Andrej Karpathy.
+  - An excutable file of "reft" with model weights is all you need to run the reft-supported LLMs on your GPU(s).
 
-- An excutable file of "reft" with model weights is all you need to run the reft-supported model on your GPU(s) with the better performance.
-
-- Our deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset vendors, AIDC, who are seeking for the better performance, cost-efficient, easy-to-use of LLM/LMs.
-
+Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset vendors, AIDC, who are seeking for the higher performance, cost-efficient, easy-to-use of LLM/LMs deployment.
 
 
 ## Supported models
