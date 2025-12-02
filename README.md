@@ -23,7 +23,7 @@ Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset 
 
 ### LLM
 
-#### QWEN
+#### Qwen
 
 <table>
 	<thead>
@@ -224,7 +224,7 @@ Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset 
 	</tbody>
 </table>
 
-#### LLAMA
+#### Llama
 
 <table>
 	<thead>
@@ -422,8 +422,6 @@ Example model: `Qwen3/Qwen3-4B`
 
 #
 
-
-
 ## 1. Download reft .exe and weights
 
 
@@ -448,7 +446,7 @@ hf download Qwen3/Qwen3-4B --load-dir ./models
 ```sh
 docker run --rm -it --gpus all --net=host --ipc=host \
   -v ./models:/workspace/models ghcr.io/reft-ai/reft:latest \
-  /workspace/reft serve \
+  reft serve \
   --model /workspace/models/Qwen3/Qwen3-4B \
   --served_model_name Qwen3-4B \
   --chat_template qwen3
@@ -538,7 +536,7 @@ modelscope download --dataset HuggingFaceFW/fineweb-edu --local_dir ./datasets/H
 mkdir -p output
 docker run -it --rm --gpus all --net=host --ipc=host \
 	-v ./models:/workspace/models -v ./output:/output -v ./datasets:/datasets ghcr.io/reft-ai/reft:qwen3-0.6b \
-	reft-train \
+	reft train \
 	--cutoff_len 512 \
 	--model /workspace/models/Qwen/Qwen3-0.6B \
 	--block_size 512 \
@@ -565,7 +563,7 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 ```
 ### Output
 
-```bash
+```shell
 [1][2025-11-30 09:20:15][I][         train_main.cc: 186]  Reft: v1.0.0, 5301f2a4fb303fd647fe783aa326522efde8ceb4
 [1][2025-11-30 09:20:15][I][         train_main.cc: 187]  Build Time: Sun Nov 30 08:37:07 CST 202
 [2025-11-30 09:20:15.895] [info] Apply chat template: qwen2
