@@ -56,7 +56,7 @@ Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset 
 
 # Download and Run LLM/LM
 
-> To run a LLM/LM on your on-premises or cloud GPUs, all you need is a Reft .exe and weights without PyTorch/Python or related.
+To run a LLM/LM on your on-premises or cloud GPUs, all you need is a Reft .exe or reft docker and weights file without PyTorch/Python or related environment.
 
 <br/>
 
@@ -219,6 +219,12 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 	--grad_accumulation_steps 32 \
 	--resume \
 	--load_pretrained \
+    --tensor_parallels 1 \
+    --pipeline_parallels 1 \
+    --data_parallels 1 \
+    --nodes 1 \
+    --gpus_per_node 1 \
+	--chat_template qwen3 \
 	--datasets cci3@/datasets/BAAI/CCI3-HQ/data \
 	--datasets alpaca@/datasets/AI-ModelScope/alpaca-gpt4-data-en/alpaca-gpt4-data-en.json \
 	--datasets fineweb@/datasets/AI-ModelScope/chinese-fineweb-edu-v2/data \
@@ -227,7 +233,6 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 
 <details>
 	<summary>output</summary>
-</details>
 
 ```shell
 [1][2025-11-30 09:20:15][I][         train_main.cc: 186]  Reft: v1.0.0, 5301f2a4fb303fd647fe783aa326522efde8ceb4
@@ -271,3 +276,5 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 [1][2025-11-30 09:20:28][I][        sft_trainer.cc: 170]  [0/1] [8/5000] loss: 1.57812, lr: 0.0000400, seq_len: 512
 [1][2025-11-30 09:20:28][I][        sft_trainer.cc: 170]  [0/1] [9/5000] loss: 1.12500, lr: 0.0000400, seq_len: 384
 ```
+
+</details>
