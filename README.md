@@ -54,7 +54,7 @@ Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset 
   |[MeloTTS-English/...](https://huggingface.co/myshell-ai/MeloTTS-English)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
 
 
-# Install and Run LLM
+# Download and Run LLM/LM
 
 > To run a LLM/LM on your on-premises or cloud GPUs, all you need is a Reft .exe and weights without PyTorch/Python or related.
 
@@ -62,30 +62,21 @@ Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset 
 
 Example model: `Qwen3/Qwen3-4B`
 
-#
+## A. Run LLM with reft docker
 
-## 1. Download reft .exe and weights
-
-
-### 1.1 Download reft docker image
+- download reft docker and weights file
 
 ```bash
 # Qwen3/Qwen3-4B
 docker pull ghcr.io/reft-ai/reft:qwen3-4b
-```
 
-### 1.2 Download model weights from HuggingFace
-
-```bash
 mkdir -p models
 hf download Qwen3/Qwen3-4B --load-dir ./models
 ```
 
-## 2. Run LLM
+- run LLM
 
-#### Command
-
-```sh
+```bash
 docker run --rm -it --gpus all --net=host --ipc=host \
   -v ./models:/workspace/models ghcr.io/reft-ai/reft:latest \
   reft serve \
@@ -94,7 +85,27 @@ docker run --rm -it --gpus all --net=host --ipc=host \
   --chat_template qwen3
 ```
 
-#### Output
+## B. Run LLM with one-file reft.exe
+
+- download reft.exe and weights file
+
+```bash
+sudo apt install -y ./<(curl -fsL https://github.com/reft-ai/reft.cpp/releases/download/v1.0.0/reft_1.0.0-0ubuntu24.04_amd64.deb)
+
+mkdir -p models
+hf download Qwen3/Qwen3-4B --load-dir ./models
+```
+
+- run LLM
+```bash
+reft serve \
+  --model /workspace/models/Qwen3/Qwen3-4B \
+  --served_model_name Qwen3-4B \
+  --chat_template qwen3
+```
+
+<details>
+	<summary>Output</summary>
 
 ```sh
   ████████████████████████████████████████▏ 100.0% [ 199/ 199 | 476.2 Hz | 0s<0s]  
@@ -116,10 +127,13 @@ docker run --rm -it --gpus all --net=host --ipc=host \
 [2025-11-11 07:02:50.244] [Serve][1] [info] Starting API server ...
 [2025-11-11 07:02:50.245] [Serve][1] [info] HTTP server listening on 0.0.0.0:8888 ...
 ```
+</details>
 
 ### 2.1 Chat via WebUI
 
-Open url: http://127.0.0.1:8888/ui.html
+`A chat web UI has been integrated into the reft command`
+
+Open url: [http://127.0.0.1:8888/ui.html](http://127.0.0.1:8888/ui.html)
 
 
 ### 2.2 Chat via CLI
@@ -160,18 +174,25 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 
 # Training
 
-## Download some interesting datasets
+## Download the public datasets or use your own datasets
 
 ```bash
-# Exmaple datasets: `CCI-3-HQ` and `Alpaca GPT4`
+# Exmaple datasets: `CCI-3-HQ`, `Alpaca GPT4` and `FineWeb`
+
+# download from HuggingFace
+hf download --dataset BAAI/CCI3-HQ --local_dir ./datasets/BAAI/CCI3-HQ
+hf download --dataset AI-ModelScope/alpaca-gpt4-data-en --local_dir ./datasets/AI-ModelScope/alpaca-gpt4-data-en
+hf download --dataset AI-ModelScope/chinese-fineweb-edu-v2 --local_dir ./datasets/AI-ModelScope/chinese-fineweb-edu-v2
+hf download --dataset HuggingFaceFW/fineweb-edu --local_dir ./datasets/HuggingFaceFW/fineweb-edu
+
+# or download from ModelScope
 modelscope download --dataset BAAI/CCI3-HQ --local_dir ./datasets/BAAI/CCI3-HQ
 modelscope download --dataset AI-ModelScope/alpaca-gpt4-data-en --local_dir ./datasets/AI-ModelScope/alpaca-gpt4-data-en
 modelscope download --dataset AI-ModelScope/chinese-fineweb-edu-v2 --local_dir ./datasets/AI-ModelScope/chinese-fineweb-edu-v2
-# optional
 modelscope download --dataset HuggingFaceFW/fineweb-edu --local_dir ./datasets/HuggingFaceFW/fineweb-edu
 ```
 
-## Choose a model and perform fine-tuning on it
+## Train LLM via full-SFT/freeze-SFT/LoRA/RL
 
 ```bash
 # Example model: Qwen/Qwen3-0.6B
@@ -203,7 +224,10 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 	--datasets fineweb@/datasets/AI-ModelScope/chinese-fineweb-edu-v2/data \
 	--datasets fineweb@/datasets/HuggingFaceFW/fineweb-edu/data/CC-MAIN-2025-26
 ```
-### Output
+
+<details>
+	<summary>output</summary>
+</details>
 
 ```shell
 [1][2025-11-30 09:20:15][I][         train_main.cc: 186]  Reft: v1.0.0, 5301f2a4fb303fd647fe783aa326522efde8ceb4
