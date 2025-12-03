@@ -6,7 +6,9 @@
 [![Build](https://github.com/reft-ai/reft/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/reft-ai/reft/actions/workflows/release.yml)
 <!--[![Publish](https://github.com/reft-ai/reft.cpp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/reft-ai/reft/actions/workflows/docker-publish.yml))-->
 
-# What is `reft.cpp`
+***
+
+# :mag: What is `reft.cpp`
 
 A high-performance and easy-to-use LLM/LM serving tools for both Inference and Training. 
   - 20%+ higher Inference and Training performance than other LLM deployments. All of Ops/Ops-Fusion/Ops-Optimization, serving framework and training tools in C++ without Python/PyTorch, inspired by [llm.c](https://github.com/karpathy/llm.c) of Andrej Karpathy.
@@ -15,15 +17,12 @@ A high-performance and easy-to-use LLM/LM serving tools for both Inference and T
 Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset vendors, AIDC, who are seeking for the higher performance, cost-efficient, easy-to-use of LLM/LMs deployment.
 
 
-## Supported models
+## :fire: Supported models
 
 - :white_check_mark: : Done
 - :coffee: : To-Do
 
-### LLM
-
-
-#### Qwen
+### :zap: LLM
 
   | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:----------------:|:------------:|:---------:|
@@ -37,8 +36,7 @@ Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset 
   |[Llama-3.2-1B/1B-Instruct/3B/3B-Instruct](https://huggingface.co/collections/meta-llama/llama-32)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|:coffee:|
   |[Llama-3.1-8B/8B-Instruct/70B/70B-Instruct](https://huggingface.co/collections/meta-llama/llama-32)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|:coffee:|	
 
-	
-### Vision LM
+### :zap: Vision LM
 
   | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
@@ -48,7 +46,7 @@ Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset 
   |[Qwen3-VL-30B-A3B/235B-A22B](https://huggingface.co/collections/Qwen/qwen3-vl)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
   
 	
-### Audio LM
+### :zap: Audio LM
 
   | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
   |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
@@ -56,17 +54,17 @@ Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset 
   |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
   |[MeloTTS-English/...](https://huggingface.co/myshell-ai/MeloTTS-English)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
 
-<br/>
+***
 
-# Download and Run LLM/LM
+# :arrow_down: Download and Run LLM/LM
 
-To run a LLM/LM on your on-premises or cloud GPUs, all you need is a Reft .exe or reft docker and weights file without PyTorch/Python or related environment.
+***To run a LLM/LM on your on-premises or cloud GPUs, all you need is a Reft .exe or reft docker and weights file without PyTorch/Python or related environment.***
 
 <br/>
 
 Example model: `Qwen3/Qwen3-4B`
 
-## A. Run LLM with reft docker
+## :arrow_right: A. Run LLM with reft docker
 
 - download reft docker and weights file
 	
@@ -114,7 +112,7 @@ Example model: `Qwen3/Qwen3-4B`
 	```
 	</details>
 
-## B. Run LLM with one-file reft.exe
+## :arrow_right: B. Run LLM with one-file reft.exe
 
 - download reft.exe and weights file
 	
@@ -157,57 +155,61 @@ Example model: `Qwen3/Qwen3-4B`
 	[2025-11-11 07:02:50.245] [Serve][1] [info] HTTP server listening on 0.0.0.0:8888 ...
 	```
 	</details>
-<br/>
 
-# Chatting
+***
 
-## A. Chat via WebUI
+# :speaking_head: Chatting
 
-WebUI from [Nanochat](https://github.com/karpathy/nanchat) is integrated in reft and you can use any other OpenAI-compatible WebUI also.
+## :arrow_right: A. Chat via WebUI
 
-Open url: [http://127.0.0.1:8888/ui.html](http://127.0.0.1:8888/ui.html)
-
-
-## B. Chat via CLI
+- WebUI from [Nanochat](https://github.com/karpathy/nanchat) is integrated in reft and you can use any other OpenAI-compatible WebUI also.
 	
-```sh
-curl -Ns http://127.0.0.1:8888/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -d '{
-	"model": "Qwen3-4B",
-	"messages": [{"role":"user", "content": "<｜begin▁of▁sentence｜><｜User｜>Who are you?<｜Assistant｜><think>\\n"}],
-	"max_tokens": 24,
-	"temperature": 0.6,
-	"stream": true
-  }'
-```
+	Open url: [http://127.0.0.1:8888/ui.html](http://127.0.0.1:8888/ui.html)
 
-<details>
-	<summary>Output</summary>
 
-```text
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
+## :arrow_right: B. Chat via CLI
+- Command
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Greetings"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+	```shell
+	curl -Ns http://127.0.0.1:8888/v1/chat/completions \
+	  -H "Content-Type: application/json" \
+	  -d '{
+		"model": "Qwen3-4B",
+		"messages": [{"role":"user", "content": "<｜begin▁of▁sentence｜><｜User｜>Who are you?<｜Assistant｜><think>\\n"}],
+		"max_tokens": 24,
+		"temperature": 0.6,
+		"stream": true
+	  }'
+	```
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"!"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" I"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"'m"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" Deep"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-
-...
-```
-</details>
+	<details>
+		<summary>Output</summary>
+	
+		```text
+		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
+		
+		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Greetings"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+		
+		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"!"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+		
+		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" I"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+		
+		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"'m"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+		
+		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" Deep"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+		
+		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+		
+		...
+		```
+	</details>
 <br/>
 
-# Training
+***
 
-## Download the public datasets or use your own datasets
+# :arrows_counterclockwise: Training
+
+## :star: Download the public datasets or use your own datasets
 
 ```bash
 # Exmaple datasets: `CCI-3-HQ`, `Alpaca GPT4` and `FineWeb`
@@ -217,7 +219,7 @@ hf download BAAI/CCI3-HQ --repo-type=dataset --local-dir ./datasets/BAAI/CCI3-HQ
 hf download llamafactory/alpaca_gpt4_en --repo-type=dataset --local-dir ./datasets/llamafactory/alpaca_gpt4_en
 ```
 
-## Train LLM via full-SFT/freeze-SFT/LoRA/RL
+## :star: Train LLM via full-SFT/freeze-SFT/LoRA/RL
 
 ```bash
 mkdir -p output
@@ -303,7 +305,9 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 </details>
 <br/>
 
-# How to calculate the required GPU vRAM size for a LLM's inference or training
+***
+
+# :computer: How to calculate the required GPU vRAM size for a LLM's inference or training
 
 - Inference: If a LLM weights is xB, then 2x(GB) is the minimum vRAM size needed.
 - Training: If a LLM weights is xB, then 8x(GB) is the minimus vRAM size needed for full-parameter training and 4x(GB) is the minimum for freeze-SFT, LoRA or RL.
