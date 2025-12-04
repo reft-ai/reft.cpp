@@ -24,35 +24,35 @@ Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset 
 
 ### :zap: LLM
 
-  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
-  |:---------------------:|:----------:|:-------:|:----------------:|:------------:|:---------:|
-  |[Qwen3-0.6B/0.6B-Base/1.7B/1.7B-Base/4B/4B-Base/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base/14B/14B-Base/32B/32B-Base](https://huggingface.co/collections/Qwen/qwen3)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507](https://huggingface.co/collections/Qwen/qwen3)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-V3.2/V3.2-Speciale/V3.2-Exp/V3.2-Exp-Base](https://huggingface.co/deepseek-ai/deepseek-v32)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-V3.1/V3.1-Base/V3.1-Terminus](https://huggingface.co/deepseek-ai/deepseek-v31)/[DeepSeek-V3](https://huggingface.co/deepseek-ai/deepseek-v3)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-R1](https://huggingface.co/deepseek-ai/deepseek-r1)/[DeepSeek-V3](https://huggingface.co/deepseek-ai/deepseek-v3)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|:coffee:|
-  |[GPT-OSS-20B/120B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama-3.2-1B/1B-Instruct/3B/3B-Instruct](https://huggingface.co/collections/meta-llama/llama-32)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama-3.1-8B/8B-Instruct/70B/70B-Instruct](https://huggingface.co/collections/meta-llama/llama-32)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|:coffee:|	
+  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon |Apple NPU |
+  |:---------------------:|:----------:|:-------:|:----------------:|:---------:|
+  |[Qwen3-0.6B/0.6B-Base/1.7B/1.7B-Base/4B/4B-Base/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base/14B/14B-Base/32B/32B-Base](https://huggingface.co/collections/Qwen/qwen3)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|
+  |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507](https://huggingface.co/collections/Qwen/qwen3)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-V3.2/V3.2-Speciale/V3.2-Exp/V3.2-Exp-Base](https://huggingface.co/deepseek-ai/deepseek-v32)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-V3.1/V3.1-Base/V3.1-Terminus](https://huggingface.co/deepseek-ai/deepseek-v31)/[DeepSeek-V3](https://huggingface.co/deepseek-ai/deepseek-v3)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-R1](https://huggingface.co/deepseek-ai/deepseek-r1)/[DeepSeek-V3](https://huggingface.co/deepseek-ai/deepseek-v3)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|
+  |[GPT-OSS-20B/120B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Llama-3.2-1B/1B-Instruct/3B/3B-Instruct](https://huggingface.co/collections/meta-llama/llama-32)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|
+  |[Llama-3.1-8B/8B-Instruct/70B/70B-Instruct](https://huggingface.co/collections/meta-llama/llama-32)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|
 
 ### :zap: Vision LM
 
-  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
-  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[SAM](https://github.com/facebookresearch/segment-anything)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[ViT](https://github.com/google-research/vision_transformer)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[Qwen3-VL-2B/4B/4B-Instruct/8B/8B-Instruct/32B](https://huggingface.co/collections/Qwen/qwen3-vl)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen3-VL-30B-A3B/235B-A22B](https://huggingface.co/collections/Qwen/qwen3-vl)|:coffee:|:coffee:|:coffee:|:coffee:|:coffee:|
+  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Apple NPU |
+  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|
+  |[SAM](https://github.com/facebookresearch/segment-anything)| :coffee: | :coffee: | :coffee: | :coffee: |
+  |[ViT](https://github.com/google-research/vision_transformer)| :coffee: | :coffee: | :coffee: | :coffee: |
+  |[Qwen3-VL-2B/4B/4B-Instruct/8B/8B-Instruct/32B](https://huggingface.co/collections/Qwen/qwen3-vl)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |[Qwen3-VL-30B-A3B/235B-A22B](https://huggingface.co/collections/Qwen/qwen3-vl)|:coffee:|:coffee:|:coffee:|:coffee:|
   
 	
 ### :zap: Audio LM
 
-  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Huawei Asend | Apple NPU |
-  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|:-----------:|
-  |[Whisper](https://huggingface.co/collections/openai/whisper-release)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
-  |[MeloTTS-English/...](https://huggingface.co/myshell-ai/MeloTTS-English)| :coffee: | :coffee: | :coffee: | :coffee: | :coffee: |
+  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Apple NPU |
+  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|
+  |[Whisper](https://huggingface.co/collections/openai/whisper-release)| :coffee: | :coffee: | :coffee: | :coffee:|
+  |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :coffee: | :coffee: | :coffee: | :coffee:|
+  |[MeloTTS-English/...](https://huggingface.co/myshell-ai/MeloTTS-English)| :coffee: | :coffee: | :coffee: | :coffee:|
 
 ***
 
@@ -219,7 +219,7 @@ hf download BAAI/CCI3-HQ --repo-type=dataset --local-dir ./datasets/BAAI/CCI3-HQ
 hf download llamafactory/alpaca_gpt4_en --repo-type=dataset --local-dir ./datasets/llamafactory/alpaca_gpt4_en
 ```
 
-## :star: Train LLM via full-SFT/freeze-SFT/LoRA/RL
+## :star: Train LLM via Pre-train/full-SFT/freeze-SFT/LoRA/RL
 
 ```bash
 mkdir -p output
@@ -307,8 +307,15 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 
 ***
 
-# :computer: How to calculate the required GPU vRAM size for a LLM's inference or training
+# FAQ
 
+<details>
+	<summary>
+ 	:computer: How to calculate the required GPU vRAM size for a LLM's inference or training
+	</summary>
+	
 - Inference: If a LLM weights is xB, then 2x(GB) is the minimum vRAM size needed.
 - Training: If a LLM weights is xB, then 8x(GB) is the minimus vRAM size needed for full-parameter training and 4x(GB) is the minimum for freeze-SFT, LoRA or RL.
 - TP, PP need to be configured per the amount of GPUs(1, 2, 4, 8, 16...). TP*PP= the amout of GPUs.
+
+</details>
