@@ -321,3 +321,11 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 - TP, PP need to be configured per the amount of GPUs(1, 2, 4, 8, 16...). TP*PP= the amout of GPUs.
 
 </details>
+
+# Contact Us
+
+For commercial uses, technical consulting, sponsorship opportunities, or partnership inquiries, please contact us at 'reft.email'
+
+# Acknowledgment
+
+We learned the design and reused code from the following projects: llm.c, Nanochat, PyTorch, vLLM, SGLang, FlashInfer.
