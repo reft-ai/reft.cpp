@@ -6,6 +6,8 @@
 [![Build](https://github.com/reft-ai/reft/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/reft-ai/reft/actions/workflows/release.yml)
 <!--[![Publish](https://github.com/reft-ai/reft.cpp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/reft-ai/reft/actions/workflows/docker-publish.yml))-->
 
+Easy-to-use, High-performance, Native-implemented LLM/LM serving for both inference and training
+
 ***
 
 # :mag: What is `reft.cpp`
