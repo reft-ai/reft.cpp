@@ -324,8 +324,8 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 
 # Contact Us
 
-For commercial uses, technical consulting, sponsorship opportunities, or partnership inquiries, please contact us at 'ai@reft-ai.com'
+For commercial uses, technical consulting, sponsorship opportunities, or partnership inquiries, please contact us at [ai@reft-ai.com](mailto:ai@reft-ai.com)
 
 # Acknowledgment
 
-We learned the design and reused code from the following projects: llm.c, Nanochat, PyTorch, vLLM, SGLang, FlashInfer.
+We learned the design and reused code from the following projects: [llm.c](https://github.com/karpathy/llm.c), [Nanochat](https://github.com/karpathy/nanochat), [PyTorch](https://github.com/pytorch/pytorch), [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), [FlashInfer](https://github.com/flashinfer-ai/flashinfer).
