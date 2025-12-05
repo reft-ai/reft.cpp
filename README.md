@@ -324,7 +324,7 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 
 # Contact Us
 
-For commercial uses, technical consulting, sponsorship opportunities, or partnership inquiries, please contact us at 'reft.email'
+For commercial uses, technical consulting, sponsorship opportunities, or partnership inquiries, please contact us at 'ai@reft-ai.com'
 
 # Acknowledgment
 
