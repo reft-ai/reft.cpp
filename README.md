@@ -9,49 +9,95 @@
 
 # About
 
-A high-performance and easy-to-use LLM/LM serving tools for both Inference and Training. 
-  - 20%+ higher Inference and Training performance than other LLM deployments. All of Ops/Ops-Fusion/Ops-Optimization, serving framework and training tools in C++ without Python/PyTorch, inspired by [llm.c](https://github.com/karpathy/llm.c) of Andrej Karpathy.
-  - An excutable file of "reft" with model weights is all you need to run the reft-supported LLMs on your GPU(s).
+`reft.cpp` is a toolkit for both inference serving and training in only one native executable file
 
-Reft deliveralbes are for enterprises, institutes, individuals, GPU/NPU chipset vendors, AIDC, who are seeking for the higher performance, cost-efficient, easy-to-use of LLM/LMs deployment.
+- 20%++ faster TTFT/TPOT than any Python/PyTorch-based servings in the same quantization/precision
+- 0 running dependencies other than CUDA and Linux
+- GPUs and edge-NPU supported
+- MoE/Dense LLM and VL supported
+
+![dbd7f05f920a4ca356bd7c78d4f87300](https://github.com/user-attachments/assets/9c3ea833-a949-4c75-ade2-15c7858ddb40)
 
 
-## :fire: Supported models
+## :fire: Key Features
 
-- :white_check_mark: : Done
+- **Configurable Continuous Batching Scheduler** – Efficient request handling with dynamic batching
+- **Paged Attention** – Optimized memory management for long sequences
+- **OpenAI-Compatible API Server** – Seamless integration with existing tools
+- **Lightweight & Portable** – Single executable, no external dependencies
+- **Native Performance** – Pure native implementation, high throughput and low latency
+- **Memory Efficient** – Low memory footprint during inference
+- **Multi-Modal Support** – Built-in support for text, image, and other modalities
+- **Multi-Model Support** – Run various model architectures out of the box
+- **Hardware Flexibility** – Supports CPU, GPU, NPU, and specialized accelerators
+- **Extensible via Plugins** – Custom plugins for extended functionality
+
+## Supported Models
+
+- :white_check_mark: : Supported
 - :coffee: : To-Do
 
 ### :zap: LLM
 
-  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon |Apple NPU |
-  |:---------------------:|:----------:|:-------:|:----------------:|:---------:|
-  |[Qwen3-0.6B/0.6B-Base/1.7B/1.7B-Base/4B/4B-Base/4B-Instruct-2507/4B-Thinking-2507/8B/8B-Base/14B/14B-Base/32B/32B-Base](https://huggingface.co/collections/Qwen/qwen3)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|
-  |[Qwen3-30B-A3B/30B-A3B-Instruct-2507/30B-A3B-Thinking-2507/235B-A22B/235B-A22B/235B-A22B-Instruct-2507/235B-A22B-Thinking-2507](https://huggingface.co/collections/Qwen/qwen3)|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-V3.2/V3.2-Speciale/V3.2-Exp/V3.2-Exp-Base](https://huggingface.co/deepseek-ai/deepseek-v32)|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-V3.1/V3.1-Base/V3.1-Terminus](https://huggingface.co/deepseek-ai/deepseek-v31)/[DeepSeek-V3](https://huggingface.co/deepseek-ai/deepseek-v3)|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-R1](https://huggingface.co/deepseek-ai/deepseek-r1)/[DeepSeek-V3](https://huggingface.co/deepseek-ai/deepseek-v3)|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[DeepSeek-R1-Distill-Qwen-1.5/7/14/32B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|
-  |[GPT-OSS-20B/120B](https://huggingface.co/collections/deepseek-ai/deepseek-r1)|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Llama-3.2-1B/1B-Instruct/3B/3B-Instruct](https://huggingface.co/collections/meta-llama/llama-32)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|
-  |[Llama-3.1-8B/8B-Instruct/70B/70B-Instruct](https://huggingface.co/collections/meta-llama/llama-32)| RTX3060/RTX4090 <br/> A100/A800 <br/> H100/H800/H200 <br/> |:coffee:|:coffee:|:coffee:|
+  |            Models         |     Nvidia GPU     |        AMD GPU       |    Qualcomm Hexagon  |      Apple NPU      |
+  |:--------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
+  |DeepSeek-V3.2 (685B)       | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DeepSeek-V3/R1 (671B)      | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DeepSeek-V2.5 (236B)       | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DeepSeek-V2 (16B, 236B)    | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DeepSeek-MoE (16B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen3 (0.6B-8B)            | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen3-MoE                  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen3-MoE (30B - 235B)     | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen3-Next (80B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen2.5 (0.5B - 72B)       | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen2-MoE (57BA14B)        | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen2 (0.5B - 72B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen1.5 - MoE (0.5B - 72B) | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen (1.8B - 72B)          | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Llama3.2 (1B, 3B)          | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Llama3.1 (8B, 70B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Llama3 (8B, 70B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Llama2 (7B - 70B)          | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Llama (7B - 65B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Gemma (2B - 7B)            | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |GPT-OSS (20B, 120B)        | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
 
 ### :zap: Vision LM
 
-  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Apple NPU |
-  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|
-  |[SAM](https://github.com/facebookresearch/segment-anything)| :coffee: | :coffee: | :coffee: | :coffee: |
-  |[ViT](https://github.com/google-research/vision_transformer)| :coffee: | :coffee: | :coffee: | :coffee: |
-  |[Qwen3-VL-2B/4B/4B-Instruct/8B/8B-Instruct/32B](https://huggingface.co/collections/Qwen/qwen3-vl)|:coffee:|:coffee:|:coffee:|:coffee:|
-  |[Qwen3-VL-30B-A3B/235B-A22B](https://huggingface.co/collections/Qwen/qwen3-vl)|:coffee:|:coffee:|:coffee:|:coffee:|
+  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |        Apple NPU    |
+  |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
+  |Qwen3-VL (2B - 8B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen3-VL-MoE (30B - 235B)  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen2.5-VL (3B, 7B, 72B)   | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen2-VL (2B, 7B, 72B)     | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen-VL (7B)               | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DeepSeek-VL2 (3B, 16B, 27B)| :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DeepSeek-VL (7B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Llama4 (Scout, Maverick)   | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Llama3.2-vision (11B, 90B) | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |SAM-3D-Objects             | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |SAM-3D-Body                | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |SAM-2                      | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |SAM                        | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   
 	
 ### :zap: Audio LM
 
-  | Models                | Nvidia GPU | AMD GPU | Qualcomm Hexagon | Apple NPU |
-  |:---------------------:|:----------:|:-------:|:-----------:|:-----------:|
-  |[Whisper](https://huggingface.co/collections/openai/whisper-release)| :coffee: | :coffee: | :coffee: | :coffee:|
-  |[OpenVoice](https://huggingface.co/myshell-ai/OpenVoice)| :coffee: | :coffee: | :coffee: | :coffee:|
-  |[MeloTTS-English/...](https://huggingface.co/myshell-ai/MeloTTS-English)| :coffee: | :coffee: | :coffee: | :coffee:|
+  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |        Apple NPU    |
+  |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
+  |Whisper                    | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |OpenVoice2                 | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |SAM-Audio                  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Melo-TTS                   | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+
+
+### :zap: Visual Features
+
+  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |        Apple NPU    |
+  |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
+  |DINOv2                     | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  
 
 ***
 
