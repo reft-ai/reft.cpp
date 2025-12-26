@@ -5,7 +5,7 @@
 
 ![reft cc-new-logo jpg](https://github.com/user-attachments/assets/25f0c2e7-0f64-41e9-979d-ddb0ff932c4d)
 
-<center><h3>Easy-to-use, High-performance, Native-implemented LLM/LM serving for both inference and training</h3></center>
+<center><h3>C++ Native-implemented(without Python/PyTorch) LLM/LM's inference serving and training for High-Performance and Easy-to-Use</h3></center>
 
 # About
 
@@ -16,7 +16,8 @@
 - GPUs and edge-NPU supported
 - MoE/Dense LLM and VL supported
 
-![dbd7f05f920a4ca356bd7c78d4f87300](https://github.com/user-attachments/assets/9c3ea833-a949-4c75-ade2-15c7858ddb40)
+<img width="788" height="478" alt="17835ffb4065a83e929c37f8668f6741" src="https://github.com/user-attachments/assets/2a3b629e-2647-43ca-891f-95f52711e25f" />
+
 
 
 ## :fire: Key Features
@@ -43,23 +44,15 @@
   |:--------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
   |DeepSeek-V3.2 (685B)       | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |DeepSeek-V3/R1 (671B)      | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |DeepSeek-V2.5 (236B)       | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |DeepSeek-V2 (16B, 236B)    | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |DeepSeek-MoE (16B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DeepSeek-OCR               | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3 (0.6B-8B)            | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3-MoE                  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3-MoE (30B - 235B)     | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3-Next (80B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen2.5 (0.5B - 72B)       | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen2-MoE (57BA14B)        | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen2 (0.5B - 72B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen1.5 - MoE (0.5B - 72B) | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen (1.8B - 72B)          | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama3.2 (1B, 3B)          | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama3.1 (8B, 70B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama3 (8B, 70B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Llama2 (7B - 70B)          | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Llama (7B - 65B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Gemma (2B - 7B)            | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |GPT-OSS (20B, 120B)        | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
 
@@ -70,10 +63,6 @@
   |Qwen3-VL (2B - 8B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3-VL-MoE (30B - 235B)  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen2.5-VL (3B, 7B, 72B)   | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen2-VL (2B, 7B, 72B)     | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen-VL (7B)               | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |DeepSeek-VL2 (3B, 16B, 27B)| :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |DeepSeek-VL (7B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama4 (Scout, Maverick)   | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama3.2-vision (11B, 90B) | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |SAM-3D-Objects             | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
@@ -355,14 +344,23 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 # FAQ
 
 <details>
-	<summary>
- 	:computer: How to calculate the required GPU vRAM size for a LLM's inference or training
-	</summary>
+	<summary>How to calculate the required GPU vRAM size for a LLM's inference or training</summary>
 	
 - Inference: If a LLM weights is xB, then 2x(GB) is the minimum vRAM size needed.
 - Training: If a LLM weights is xB, then 8x(GB) is the minimus vRAM size needed for full-parameter training and 4x(GB) is the minimum for freeze-SFT, LoRA or RL.
 - TP, PP need to be configured per the amount of GPUs(1, 2, 4, 8, 16...). TP*PP= the amout of GPUs.
 
+</details>
+
+<details>
+	<summary>Why benchmarking is hard</summary>
+	https://epoch.ai/gradient-updates/why-benchmarking-is-hard <br/>
+	https://blog.vllm.ai/2025/10/28/Kimi-K2-Accuracy.html
+</details>
+
+<details>
+	<summary>Chasing 100% Accuracy: A Deep Dive into Debugging Kimi K2's Tool-Calling on vLLM</summary>
+	https://blog.vllm.ai/2025/10/28/Kimi-K2-Accuracy.html
 </details>
 
 # Contact Us
@@ -371,4 +369,4 @@ For commercial uses, technical consulting, sponsorship opportunities, or partner
 
 # Acknowledgment
 
-We learned the design and reused code from the following projects: [llm.c](https://github.com/karpathy/llm.c), [Nanochat](https://github.com/karpathy/nanochat), [PyTorch](https://github.com/pytorch/pytorch), [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), [FlashInfer](https://github.com/flashinfer-ai/flashinfer).
+We learned the design or reused code from the following projects: [llm.c](https://github.com/karpathy/llm.c), [HuggingFace](https://github.com/huggingface/transformers), [PyTorch](https://github.com/pytorch/pytorch), [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), [FlashInfer](https://github.com/flashinfer-ai/flashinfer).
