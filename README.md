@@ -93,7 +93,7 @@
 
 ***
 
-# :arrow_down: Download and Run LLM/LM
+# Download and Run LLM/LM
 
 ***To run a LLM/LM on your on-premises or cloud GPUs, all you need is a Reft .exe or reft docker and weights file without PyTorch/Python or related environment.***
 
@@ -144,7 +144,7 @@ reft serve \
 ```
 </details>
 
-- Testing
+- example request
 
 ```shell
 curl -Ns http://127.0.0.1:8888/v1/chat/completions \
