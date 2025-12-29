@@ -3,9 +3,12 @@
 [![Build](https://github.com/reft-ai/reft/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/reft-ai/reft/actions/workflows/release.yml)
 <!--[![Publish](https://github.com/reft-ai/reft.cpp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/reft-ai/reft/actions/workflows/docker-publish.yml))-->
 
-![reft cc-new-logo jpg](https://github.com/user-attachments/assets/25f0c2e7-0f64-41e9-979d-ddb0ff932c4d)
+<!--![reft cc-new-logo jpg](https://github.com/user-attachments/assets/25f0c2e7-0f64-41e9-979d-ddb0ff932c4d)-->
 
-<center><h3>C++ Native-implemented(without Python/PyTorch) LLM/LM's inference serving and training for High-Performance and Easy-to-Use</h3></center>
+<!--<center><h3>C++ Native-implemented(without Python/PyTorch) LLM/LM's inference serving and training for High-Performance and Easy-to-Use</h3></center>-->
+
+<img width="3466" height="1308" alt="3311b35fe62743ee47cb7401294aac34" src="https://github.com/user-attachments/assets/1ae5471a-9ceb-4daa-aa91-6dc596639786" />
+
 
 # About
 
@@ -36,56 +39,56 @@
 ## Supported Models
 
 - :white_check_mark: : Supported
-- :coffee: : To-Do
+- :coffee: : In-Progress
 
 ### :zap: LLM
 
-  |            Models         |     Nvidia GPU     |        AMD GPU       |    Qualcomm Hexagon  |      Apple NPU      |
-  |:--------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
-  |DeepSeek-V3.2 (685B)       | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |            Models         |     Nvidia GPU     |        AMD GPU       |    Qualcomm Hexagon  |     Apple Silicon   |
+  |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
+  |DeepSeek-V3.2 (685B)       | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |DeepSeek-V3/R1 (671B)      | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |DeepSeek-OCR               | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DeepSeek-OCR               | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3 (0.6B-8B)            | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3-MoE                  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3-MoE (30B - 235B)     | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen3-Next (80B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen3-Next (80B)           | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen2.5 (0.5B - 72B)       | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama3.2 (1B, 3B)          | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama3.1 (8B, 70B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama3 (8B, 70B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Gemma (2B - 7B)            | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |GPT-OSS (20B, 120B)        | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Gemma (2B - 7B)            | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |GPT-OSS (20B, 120B)        | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
 
 ### :zap: Vision LM
 
-  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |        Apple NPU    |
+  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |     Apple Silicon   |
   |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
   |Qwen3-VL (2B - 8B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen3-VL-MoE (30B - 235B)  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen3-VL-MoE (30B - 235B)  | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen2.5-VL (3B, 7B, 72B)   | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Llama4 (Scout, Maverick)   | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Llama3.2-vision (11B, 90B) | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |SAM-3D-Objects             | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |SAM-3D-Body                | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |SAM-2                      | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |SAM                        | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Llama4 (Scout, Maverick)   | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Llama3.2-vision (11B, 90B) | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |SAM-3D-Objects             | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |SAM-3D-Body                | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |SAM-2                      | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |SAM                        | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   
 	
 ### :zap: Audio LM
 
-  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |        Apple NPU    |
+  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |    Apple Silicon    |
   |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
-  |Whisper                    | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |OpenVoice2                 | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |SAM-Audio                  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Melo-TTS                   | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Whisper                    | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |OpenVoice2                 | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |SAM-Audio                  | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Melo-TTS                   | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
 
 
 ### :zap: Visual Features
 
-  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |        Apple NPU    |
+  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |    Apple Silicon    |
   |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
-  |DINOv2                     | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DINOv2                     | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   
 
 ***
@@ -98,152 +101,92 @@
 
 Example model: `Qwen3/Qwen3-4B`
 
-## :arrow_right: A. Run LLM with reft docker
-
-- download reft docker and weights file
-	
-	```bash
-	# Qwen3/Qwen3-4B
-	docker pull ghcr.io/reft-ai/reft:qwen3-4b
-	
-	mkdir -p models
-	hf download Qwen3/Qwen3-4B --load-dir ./models
-	```
-
-- run LLM
-	
-	```bash
-	docker run --rm -it --gpus all --net=host --ipc=host \
-	  -v ./models:/workspace/models ghcr.io/reft-ai/reft:latest \
-	  reft serve \
-	  --model /workspace/models/Qwen3/Qwen3-4B \
-	  --served_model_name Qwen3-4B \
-	  --chat_template qwen3
-	```
-
- 	<details>
-		<summary>Output</summary>
-	
-	```sh
-	  ████████████████████████████████████████▏ 100.0% [ 199/ 199 | 476.2 Hz | 0s<0s]  
-	[2025-11-11 07:02:50.007] [GPUModelRunner(rank=0)][7] [info] Model loaded
-	[2025-11-11 07:02:50.007] [GPUWorker(rank=0)][7] [info] GPU Mem Info(free=18.4 GB, total=23.5 GB)
-	[2025-11-11 07:02:50.007] [Serve][1] [info] Available GPU Memory: 14.4 GB
-	[2025-11-11 07:02:50.007] [Serve][1] [info] max_num_layers: 1
-	[2025-11-11 07:02:50.008] [Serve][1] [info] All layers have the same page size: 1835008 bytes
-	[2025-11-11 07:02:50.008] [Serve][1] [info] GPU KV cache: 8438 blocks
-	[2025-11-11 07:02:50.008] [Serve][1] [info] GPU KV cache size: 540032 tokens
-	[2025-11-11 07:02:50.008] [Serve][1] [info] Maximum concurrency for 4096 tokens per request: 131.84x
-	[2025-11-11 07:02:50.008] [Serve][1] [info] The KV cache size required by each layer: 15483797504 bytes
-	[2025-11-11 07:02:50.008] [GPUModelRunner(rank=0)][7] [info] Initialize KV cache | num_blocks: 8438
-	[2025-11-11 07:02:50.009] [GPUModelRunner(rank=0)][7] [info] CUDA graph capture sizes: 1
-	[2025-11-11 07:02:50.152] [GPUModelRunner(rank=0)][7] [info] Graph test begin, size: 1
-	[2025-11-11 07:02:50.243] [GPUModelRunner(rank=0)][7] [info] Graph test passed, size: 1
-	[2025-11-11 07:02:50.243] [GPUModelRunner(rank=0)][7] [info] Graph capturing finished in 0 secs, took 0.04 GiB
-	[2025-11-11 07:02:50.243] [Serve][1] [info] Init engine (profile, create_kv_cache, warmup model) took 0.23 seconds
-	[2025-11-11 07:02:50.244] [Serve][1] [info] Starting API server ...
-	[2025-11-11 07:02:50.245] [Serve][1] [info] HTTP server listening on 0.0.0.0:8888 ...
-	```
-	</details>
-
-## :arrow_right: B. Run LLM with one-file reft.exe
+## Run LLM with one-file reft.exe
 
 - download reft.exe and weights file
 	
-	```bash
-	sudo apt install -y ./<(curl -fsL https://github.com/reft-ai/reft.cpp/releases/download/v1.0.0/reft_1.0.0-0ubuntu24.04_amd64.deb)
-	
-	mkdir -p models
-	hf download Qwen3/Qwen3-4B --load-dir ./models
-	```
+```bash
+sudo apt install -y ./<(curl -fsL https://github.com/reft-ai/reft.cpp/releases/download/v1.0.0/reft_1.0.0-0ubuntu24.04_amd64.deb)
+
+mkdir -p models
+hf download Qwen3/Qwen3-4B --load-dir ./models
+```
 
 - run LLM
-	```bash
-	reft serve \
-	  --model /workspace/models/Qwen3/Qwen3-4B \
-	  --served_model_name Qwen3-4B \
-	  --chat_template qwen3
+```bash
+reft serve \
+  --model /workspace/models/Qwen3/Qwen3-4B \
+  --served_model_name Qwen3-4B
+```
+
+<details>
+	<summary>Output</summary>
+
+```sh
+  ████████████████████████████████████████▏ 100.0% [ 199/ 199 | 476.2 Hz | 0s<0s]  
+[2025-11-11 07:02:50.007] [GPUModelRunner(rank=0)][7] [info] Model loaded
+[2025-11-11 07:02:50.007] [GPUWorker(rank=0)][7] [info] GPU Mem Info(free=18.4 GB, total=23.5 GB)
+[2025-11-11 07:02:50.007] [Serve][1] [info] Available GPU Memory: 14.4 GB
+[2025-11-11 07:02:50.007] [Serve][1] [info] max_num_layers: 1
+[2025-11-11 07:02:50.008] [Serve][1] [info] All layers have the same page size: 1835008 bytes
+[2025-11-11 07:02:50.008] [Serve][1] [info] GPU KV cache: 8438 blocks
+[2025-11-11 07:02:50.008] [Serve][1] [info] GPU KV cache size: 540032 tokens
+[2025-11-11 07:02:50.008] [Serve][1] [info] Maximum concurrency for 4096 tokens per request: 131.84x
+[2025-11-11 07:02:50.008] [Serve][1] [info] The KV cache size required by each layer: 15483797504 bytes
+[2025-11-11 07:02:50.008] [GPUModelRunner(rank=0)][7] [info] Initialize KV cache | num_blocks: 8438
+[2025-11-11 07:02:50.009] [GPUModelRunner(rank=0)][7] [info] CUDA graph capture sizes: 1
+[2025-11-11 07:02:50.152] [GPUModelRunner(rank=0)][7] [info] Graph test begin, size: 1
+[2025-11-11 07:02:50.243] [GPUModelRunner(rank=0)][7] [info] Graph test passed, size: 1
+[2025-11-11 07:02:50.243] [GPUModelRunner(rank=0)][7] [info] Graph capturing finished in 0 secs, took 0.04 GiB
+[2025-11-11 07:02:50.243] [Serve][1] [info] Init engine (profile, create_kv_cache, warmup model) took 0.23 seconds
+[2025-11-11 07:02:50.244] [Serve][1] [info] Starting API server ...
+[2025-11-11 07:02:50.245] [Serve][1] [info] HTTP server listening on 0.0.0.0:8888 ...
+```
+</details>
+
+- Testing
+
+```shell
+curl -Ns http://127.0.0.1:8888/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+	"model": "Qwen3-4B",
+	"messages": [{"role":"user", "content": "<｜begin▁of▁sentence｜><｜User｜>Who are you?<｜Assistant｜><think>\\n"}],
+	"max_tokens": 24,
+	"temperature": 0.6,
+	"stream": true
+  }'
+```
+
+<details>
+	<summary>Output</summary>
+
+	```text
+	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
+	
+	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Greetings"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+	
+	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"!"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+	
+	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" I"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+	
+	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"'m"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+	
+	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" Deep"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+	
+	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+	
+	...
 	```
-	
-	<details>
-		<summary>Output</summary>
-	
-	```sh
-	  ████████████████████████████████████████▏ 100.0% [ 199/ 199 | 476.2 Hz | 0s<0s]  
-	[2025-11-11 07:02:50.007] [GPUModelRunner(rank=0)][7] [info] Model loaded
-	[2025-11-11 07:02:50.007] [GPUWorker(rank=0)][7] [info] GPU Mem Info(free=18.4 GB, total=23.5 GB)
-	[2025-11-11 07:02:50.007] [Serve][1] [info] Available GPU Memory: 14.4 GB
-	[2025-11-11 07:02:50.007] [Serve][1] [info] max_num_layers: 1
-	[2025-11-11 07:02:50.008] [Serve][1] [info] All layers have the same page size: 1835008 bytes
-	[2025-11-11 07:02:50.008] [Serve][1] [info] GPU KV cache: 8438 blocks
-	[2025-11-11 07:02:50.008] [Serve][1] [info] GPU KV cache size: 540032 tokens
-	[2025-11-11 07:02:50.008] [Serve][1] [info] Maximum concurrency for 4096 tokens per request: 131.84x
-	[2025-11-11 07:02:50.008] [Serve][1] [info] The KV cache size required by each layer: 15483797504 bytes
-	[2025-11-11 07:02:50.008] [GPUModelRunner(rank=0)][7] [info] Initialize KV cache | num_blocks: 8438
-	[2025-11-11 07:02:50.009] [GPUModelRunner(rank=0)][7] [info] CUDA graph capture sizes: 1
-	[2025-11-11 07:02:50.152] [GPUModelRunner(rank=0)][7] [info] Graph test begin, size: 1
-	[2025-11-11 07:02:50.243] [GPUModelRunner(rank=0)][7] [info] Graph test passed, size: 1
-	[2025-11-11 07:02:50.243] [GPUModelRunner(rank=0)][7] [info] Graph capturing finished in 0 secs, took 0.04 GiB
-	[2025-11-11 07:02:50.243] [Serve][1] [info] Init engine (profile, create_kv_cache, warmup model) took 0.23 seconds
-	[2025-11-11 07:02:50.244] [Serve][1] [info] Starting API server ...
-	[2025-11-11 07:02:50.245] [Serve][1] [info] HTTP server listening on 0.0.0.0:8888 ...
-	```
-	</details>
+</details>
 
-***
-
-# :speaking_head: Chatting
-
-## :arrow_right: A. Chat via WebUI
-
-- WebUI from [Nanochat](https://github.com/karpathy/nanchat) is integrated in reft and you can use any other OpenAI-compatible WebUI also.
-	
-	Open url: [http://127.0.0.1:8888/ui.html](http://127.0.0.1:8888/ui.html)
-
-
-## :arrow_right: B. Chat via CLI
-- Command
-
-	```shell
-	curl -Ns http://127.0.0.1:8888/v1/chat/completions \
-	  -H "Content-Type: application/json" \
-	  -d '{
-		"model": "Qwen3-4B",
-		"messages": [{"role":"user", "content": "<｜begin▁of▁sentence｜><｜User｜>Who are you?<｜Assistant｜><think>\\n"}],
-		"max_tokens": 24,
-		"temperature": 0.6,
-		"stream": true
-	  }'
-	```
-
-	<details>
-		<summary>Output</summary>
-	
-		```text
-		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
-		
-		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Greetings"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-		
-		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"!"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-		
-		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" I"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-		
-		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"'m"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-		
-		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" Deep"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-		
-		data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-		
-		...
-		```
-	</details>
 <br/>
 
 ***
 
-# :arrows_counterclockwise: Training
+#  Training
 
-## :star: Download the public datasets or use your own datasets
+## Download the public datasets or use your own datasets
 
 ```bash
 # Exmaple datasets: `CCI-3-HQ`, `Alpaca GPT4` and `FineWeb`
@@ -253,7 +196,7 @@ hf download BAAI/CCI3-HQ --repo-type=dataset --local-dir ./datasets/BAAI/CCI3-HQ
 hf download llamafactory/alpaca_gpt4_en --repo-type=dataset --local-dir ./datasets/llamafactory/alpaca_gpt4_en
 ```
 
-## :star: Train LLM via Pre-train/full-SFT/freeze-SFT/LoRA/RL
+## Train LLM via Pre-train/full-SFT/freeze-SFT/LoRA/RL
 
 ```bash
 mkdir -p output
@@ -341,7 +284,7 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 
 ***
 
-# FAQ
+# FAQs
 
 <details>
 	<summary>How to calculate the required GPU vRAM size for a LLM's inference or training</summary>
@@ -363,10 +306,18 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 	https://blog.vllm.ai/2025/10/28/Kimi-K2-Accuracy.html
 </details>
 
+<!--
+<details>
+	<summary>Strictly equivalence of computational precision matters the most in LLM/LM's ops and serving optimization</summary>
+	https://blog.vllm.ai/2025/10/28/Kimi-K2-Accuracy.html
+</details>
+-->
+
 # Contact Us
 
 For commercial uses, technical consulting, sponsorship opportunities, or partnership inquiries, please contact us at [ai@reft-ai.com](mailto:ai@reft-ai.com)
 
 # Acknowledgment
 
-We learned the design or reused code from the following projects: [llm.c](https://github.com/karpathy/llm.c), [HuggingFace](https://github.com/huggingface/transformers), [PyTorch](https://github.com/pytorch/pytorch), [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), [FlashInfer](https://github.com/flashinfer-ai/flashinfer).
+`reft.cpp` was inspired by Andrej Karpathy' [llm.c](https://github.com/karpathy/llm.c), and also referred to [HuggingFace](https://github.com/huggingface/transformers), [PyTorch](https://github.com/pytorch/pytorch), [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), [FlashAttention](https://github.com/Dao-AILab/flash-attention), [FlashInfer](https://github.com/flashinfer-ai/flashinfer).
+
