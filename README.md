@@ -15,7 +15,7 @@
 `reft.cpp` is a toolkit for both inference serving and training in only one native executable file
 
 - 20%++ faster TTFT/TPOT than any Python/PyTorch-based servings in the same quantization/precision
-- 0 running dependencies other than CUDA and Linux
+- 0 running dependencies other than Linux and CUDA(non-CUDA counterpart)
 - GPUs and edge-NPU supported
 - MoE/Dense LLM and VL supported
 
