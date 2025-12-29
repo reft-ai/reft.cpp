@@ -46,7 +46,7 @@
   |            Models         |     Nvidia GPU     |        AMD GPU       |    Qualcomm Hexagon  |     Apple Silicon   |
   |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
   |DeepSeek-V3.2 (685B)       | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |DeepSeek-V3/R1 (671B)      | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DeepSeek-V3/R1 (671B)      | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |DeepSeek-OCR               | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3 (0.6B-8B)            | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3-MoE                  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
@@ -65,7 +65,7 @@
   |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
   |Qwen3-VL (2B - 8B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3-VL-MoE (30B - 235B)  | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen2.5-VL (3B, 7B, 72B)   | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Qwen2.5-VL (3B, 7B, 72B)   | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama4 (Scout, Maverick)   | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama3.2-vision (11B, 90B) | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |SAM-3D-Objects             | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
@@ -93,34 +93,47 @@
 
 ***
 
-# Download and Run LLM/LM
+# Download, Install and Run LLM/LM
 
-***To run a LLM/LM on your on-premises or cloud GPUs, all you need is a Reft .exe or reft docker and weights file without PyTorch/Python or related environment.***
+***To run the LLM/LM on your on-premises/cloud GPUs or Edge NPU, all you need is a Reft .exe and weights file without PyTorch/Python related.***
 
 <br/>
 
 Example model: `Qwen3/Qwen3-4B`
 
-## Run LLM with one-file reft.exe
+<details>
+<summary>
+Download reft.exe and Weights file (the reft install packages of Reft.nv/Reft.amd/Reft.qc/Reft.mac are for the Nvidia/AMD/Qualcomm/Apple GPU/NPU respectively)
+</summary>
 
-- download reft.exe and weights file
-	
-```bash
-sudo apt install -y ./<(curl -fsL https://github.com/reft-ai/reft.cpp/releases/download/v1.0.0/reft_1.0.0-0ubuntu24.04_amd64.deb)
+```shell
+curl -fsL https://github.com/reft-ai/reft.cpp/releases/download/v1.0.1/reft_1.0.1-0ubuntu24.04_amd64.deb
 
 mkdir -p models
 hf download Qwen3/Qwen3-4B --load-dir ./models
 ```
 
-- run LLM
+</details>
+
+<details>
+<summary>Install and Run</summary>
+
+```shell
+sudo apt install -y ./reft_1.0.1-0ubuntu24.04_amd64.deb
+```
+
+**Note:** Please contact us for multi-nodes support
+
 ```bash
 reft serve \
   --model /workspace/models/Qwen3/Qwen3-4B \
   --served_model_name Qwen3-4B
 ```
 
+</details>
+
 <details>
-	<summary>Output</summary>
+<summary>Output</summary>
 
 ```sh
   ████████████████████████████████████████▏ 100.0% [ 199/ 199 | 476.2 Hz | 0s<0s]  
@@ -142,9 +155,11 @@ reft serve \
 [2025-11-11 07:02:50.244] [Serve][1] [info] Starting API server ...
 [2025-11-11 07:02:50.245] [Serve][1] [info] HTTP server listening on 0.0.0.0:8888 ...
 ```
+
 </details>
 
-- example request
+<details>
+<summary>Connect via CLI</summary>
 
 ```shell
 curl -Ns http://127.0.0.1:8888/v1/chat/completions \
@@ -158,26 +173,26 @@ curl -Ns http://127.0.0.1:8888/v1/chat/completions \
   }'
 ```
 
-<details>
-	<summary>Output</summary>
+output
 
-	```text
-	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
-	
-	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Greetings"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-	
-	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"!"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-	
-	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" I"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-	
-	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"'m"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-	
-	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" Deep"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-	
-	data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
-	
-	...
-	```
+```text
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
+
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Greetings"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"!"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" I"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"'m"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" Deep"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+
+...
+```
+
 </details>
 
 <br/>
@@ -186,9 +201,10 @@ curl -Ns http://127.0.0.1:8888/v1/chat/completions \
 
 #  Training
 
-## Download the public datasets or use your own datasets
+<details>
+<summary>Download the public datasets or use your own datasets</summary>
 
-```bash
+```shell
 # Exmaple datasets: `CCI-3-HQ`, `Alpaca GPT4` and `FineWeb`
 
 hf download HuggingFaceFW/finepdfs-edu --repo-type=dataset --local-dir ./datasets/HuggingFaceFW/fineweb-edu
@@ -196,15 +212,16 @@ hf download BAAI/CCI3-HQ --repo-type=dataset --local-dir ./datasets/BAAI/CCI3-HQ
 hf download llamafactory/alpaca_gpt4_en --repo-type=dataset --local-dir ./datasets/llamafactory/alpaca_gpt4_en
 ```
 
-## Train LLM via Pre-train/full-SFT/freeze-SFT/LoRA/RL
+</details>
 
-```bash
+<details>
+<summary>Train LLM via Pre-train/full-SFT/freeze-SFT/LoRA/RL</summary>
+
+```shell
 mkdir -p output
-docker run -it --rm --gpus all --net=host --ipc=host \
-	-v ./models:/workspace/models -v ./output:/output -v ./datasets:/datasets ghcr.io/reft-ai/reft:qwen3-4b \
-	reft train \
+reft train \
 	--cutoff_len 512 \
-	--model /workspace/models/Qwen/Qwen3-4B \
+	--model ./models/Qwen/Qwen3-4B \
 	--block_size 512 \
 	--test_every 200 \
 	--batch_size 4 \
@@ -217,7 +234,7 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 	--learning_rate_decay_frac 0.0 \
 	--use_bf16 \
 	--stage sft \
-	--checkpoint_dir /output/checkpoints/sft-qwen3-4b-full \
+	--checkpoint_dir ./output/checkpoints/sft-qwen3-4b-full \
 	--save_every 20000 \
 	--grad_accumulation_steps 32 \
 	--resume \
@@ -228,13 +245,15 @@ docker run -it --rm --gpus all --net=host --ipc=host \
     --nodes 1 \
     --gpus_per_node 1 \
 	--chat_template qwen3 \
-	--datasets cci3@/datasets/BAAI/CCI3-HQ/data \
-	--datasets alpaca@/datasets/llamafactory/alpaca_gpt4_en/alpaca-gpt4-data-en.json \
-	--datasets fineweb@/datasets/HuggingFaceFW/fineweb-edu/data/CC-MAIN-2025-26
+	--datasets cci3@./datasets/BAAI/CCI3-HQ/data \
+	--datasets alpaca@./datasets/llamafactory/alpaca_gpt4_en/alpaca-gpt4-data-en.json \
+	--datasets fineweb@./datasets/HuggingFaceFW/fineweb-edu/data/CC-MAIN-2025-26
 ```
 
+</details>
+
 <details>
-	<summary>Output</summary>
+<summary>Output</summary>
 
 ```shell
 [1][2025-11-30 09:20:15][I][         train_main.cc: 186]  Reft: v1.0.0, 5301f2a4fb303fd647fe783aa326522efde8ceb4
@@ -296,26 +315,15 @@ docker run -it --rm --gpus all --net=host --ipc=host \
 </details>
 
 <details>
-	<summary>Why benchmarking is hard</summary>
+	<summary>Strictly equivalence of computational precision matters the most in LLM/LM's ops and serving optimization</summary>
 	https://epoch.ai/gradient-updates/why-benchmarking-is-hard <br/>
 	https://blog.vllm.ai/2025/10/28/Kimi-K2-Accuracy.html
 </details>
 
-<details>
-	<summary>Chasing 100% Accuracy: A Deep Dive into Debugging Kimi K2's Tool-Calling on vLLM</summary>
-	https://blog.vllm.ai/2025/10/28/Kimi-K2-Accuracy.html
-</details>
-
-<!--
-<details>
-	<summary>Strictly equivalence of computational precision matters the most in LLM/LM's ops and serving optimization</summary>
-	https://blog.vllm.ai/2025/10/28/Kimi-K2-Accuracy.html
-</details>
--->
 
 # Contact Us
 
-For commercial uses, technical consulting, sponsorship opportunities, or partnership inquiries, please contact us at [ai@reft-ai.com](mailto:ai@reft-ai.com)
+Please contact us via [ai@reft-ai.com](mailto:ai@reft-ai.com) for commercial uses, technical consulting, sponsorship/partnership opportunities, etc. 
 
 # Acknowledgment
 
