@@ -7,7 +7,7 @@
 
 <!--<center><h3>C++ Native-implemented(without Python/PyTorch) LLM/LM's inference serving and training for High-Performance and Easy-to-Use</h3></center>-->
 
-<img width="3466" height="1308" alt="3311b35fe62743ee47cb7401294aac34" src="https://github.com/user-attachments/assets/1ae5471a-9ceb-4daa-aa91-6dc596639786" />
+<img width="880" height="507" alt="f02c0aa2c504cdec4e553d76aaecec2c" src="https://github.com/user-attachments/assets/0e10f2b0-33ed-4af6-859b-763f1d2f5240" />
 
 
 # About
