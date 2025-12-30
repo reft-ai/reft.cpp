@@ -22,13 +22,10 @@
 ## :fire: Key Features
 
 - **Configurable Continuous Batching Scheduler** – Efficient request handling with dynamic batching
-- **Paged Attention** – Optimized memory management for long sequences and low memory footprint during inference
+- **Paged Attention** – Optimized mem mgt for long sequences and lower memory footprint
 - **OpenAI-Compatible API Server** – Seamless integration with existing tools
-- **Less Dependencies** – All in one executable file, no external dependencies, only based on CUDA and non-CUDA counterpart
-- **Native Implementation** – Purely C++ for serving, modeling, ops and processing to make high throughput and low latency
 - **Multi-Modal Support** – Built-in support for text, image, and other modals
-- **Hardware Scalability** – Supports GPU/NPU, Edge NPU and multi nodes
-- **Adaption via Plugins** – Custom plugins for custom modeling
+- **Adaption via Plugins** – Plugins for custom modeling
 
 ## Supported Models
 
