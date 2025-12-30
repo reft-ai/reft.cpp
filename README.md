@@ -7,7 +7,7 @@
 
 <!--<center><h3>C++ Native-implemented(without Python/PyTorch) LLM/LM's inference serving and training for High-Performance and Easy-to-Use</h3></center>-->
 
-<img width="880" height="507" alt="f02c0aa2c504cdec4e553d76aaecec2c" src="https://github.com/user-attachments/assets/0e10f2b0-33ed-4af6-859b-763f1d2f5240" />
+<img width="873" height="505" alt="64f6288e6ebcee25c36083ddd7e00f46" src="https://github.com/user-attachments/assets/a30ad596-eab9-4563-b69b-4c10746b7abb" />
 
 
 # About
@@ -19,21 +19,16 @@
 - GPUs and edge-NPU supported
 - MoE/Dense LLM and VL supported
 
-<img width="873" height="505" alt="64f6288e6ebcee25c36083ddd7e00f46" src="https://github.com/user-attachments/assets/a30ad596-eab9-4563-b69b-4c10746b7abb" />
-
-
 ## :fire: Key Features
 
 - **Configurable Continuous Batching Scheduler** – Efficient request handling with dynamic batching
-- **Paged Attention** – Optimized memory management for long sequences
+- **Paged Attention** – Optimized memory management for long sequences and low memory footprint during inference
 - **OpenAI-Compatible API Server** – Seamless integration with existing tools
-- **Lightweight & Portable** – Single executable, no external dependencies
-- **Native Performance** – Pure native implementation, high throughput and low latency
-- **Memory Efficient** – Low memory footprint during inference
-- **Multi-Modal Support** – Built-in support for text, image, and other modalities
-- **Multi-Model Support** – Run various model architectures out of the box
-- **Hardware Flexibility** – Supports CPU, GPU, NPU, and specialized accelerators
-- **Extensible via Plugins** – Custom plugins for extended functionality
+- **Less Dependencies** – All in one executable file, no external dependencies, only based on CUDA and non-CUDA counterpart
+- **Native Implementation** – Purely C++ for serving, modeling, ops and processing to make high throughput and low latency
+- **Multi-Modal Support** – Built-in support for text, image, and other modals
+- **Hardware Scalability** – Supports GPU/NPU, Edge NPU and multi nodes
+- **Adaption via Plugins** – Custom plugins for custom modeling
 
 ## Supported Models
 
@@ -44,8 +39,8 @@
 
   |            Models         |     Nvidia GPU     |        AMD GPU       |    Qualcomm Hexagon  |     Apple Silicon   |
   |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
-  |DeepSeek-V3.2 (685B)       | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |DeepSeek-V3/R1 (671B)      | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |DeepSeek-V3.2 (685B)       | :coffee: |     :coffee:         |       N/A       |        :coffee:     |
+  |DeepSeek-V3/R1 (671B)      | :coffee: |     :coffee:         |       N/A       |        :coffee:     |
   |DeepSeek-OCR               | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3 (0.6B-8B)            | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3-MoE                  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
@@ -56,7 +51,7 @@
   |Llama3.1 (8B, 70B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Llama3 (8B, 70B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Gemma (2B - 7B)            | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |GPT-OSS (20B, 120B)        | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |GPT-OSS (20B, 120B)        | :coffee: |     :coffee:         |       N/A       |        :coffee:     |
 
 ### :zap: Vision LM
 
@@ -65,7 +60,7 @@
   |Qwen3-VL (2B - 8B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen3-VL-MoE (30B - 235B)  | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |Qwen2.5-VL (3B, 7B, 72B)   | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Llama4 (Scout, Maverick)   | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
+  |Llama4 (Scout, Maverick)   | :coffee: |     :coffee:         |       N/A       |        :coffee:     |
   |Llama3.2-vision (11B, 90B) | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |SAM-3D-Objects             | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
   |SAM-3D-Body                | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
