@@ -7,8 +7,7 @@
 
 <!--<center><h3>C++ Native-implemented(without Python/PyTorch) LLM/LM's inference serving and training for High-Performance and Easy-to-Use</h3></center>-->
 
-<img width="873" height="505" alt="64f6288e6ebcee25c36083ddd7e00f46" src="https://github.com/user-attachments/assets/a30ad596-eab9-4563-b69b-4c10746b7abb" />
-
+<img width="3466" height="1308" alt="3311b35fe62743ee47cb7401294aac34" src="https://github.com/user-attachments/assets/1ae5471a-9ceb-4daa-aa91-6dc596639786" />
 
 # About
 
@@ -18,6 +17,8 @@
 - 0 running dependencies other than Linux and CUDA(non-CUDA counterpart)
 - GPUs and edge-NPU supported
 - MoE/Dense LLM and VL supported
+
+<img width="873" height="505" alt="64f6288e6ebcee25c36083ddd7e00f46" src="https://github.com/user-attachments/assets/a30ad596-eab9-4563-b69b-4c10746b7abb" />
 
 ## :fire: Key Features
 
