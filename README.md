@@ -18,15 +18,22 @@
 - GPUs and edge-NPU supported
 - MoE/Dense LLM and VL supported
 
-<img width="873" height="505" alt="64f6288e6ebcee25c36083ddd7e00f46" src="https://github.com/user-attachments/assets/a30ad596-eab9-4563-b69b-4c10746b7abb" />
+<img width="878" height="500" alt="51d351143dab3af8c8fb264548c90344" src="https://github.com/user-attachments/assets/79e7f0b1-1911-49f6-a3db-da6e02f94644" />
+
 
 ## :fire: Key Features
 
-- **Configurable Continuous Batching Scheduler** – Efficient request handling with dynamic batching
-- **Paged Attention** – Optimized mem mgt for long sequences and lower memory footprint
-- **OpenAI-Compatible API Server** – Seamless integration with existing tools
-- **Multi-Modal Support** – Built-in support for text, image, and other modals
-- **Adaption via Plugins** – Plugins for custom modeling
+- **Native Compile** -- C++ implement&compile for modeling, serving, training
+- **OpenAI-Compatible API** -- Seamless integration with existing tools
+- **Custom via Plugins** -- Plugins for custom ops and training algorithms
+- **Multi-Modal Support** -- Support combined text, image, audio, etc
+- **Native vRAM mgt** -- Native mem mgt instead of GC to lower peak occ-mem and alloc-overhead
+
+<!--
+- **Configurable Continuous Batching Scheduler** -- Efficient request handling with dynamic batching
+- **Paged Attention** -- Optimize mem mgt for long sequences and lower memory footprint
+- **Flash Attention -- Optimized mem mgt for long sequences and lower memory footprint
+-->
 
 ## Supported Models
 
@@ -298,6 +305,17 @@ reft train \
 # FAQs
 
 <details>
+	<summary>Why Triton is not used in reft.cpp</summary>
+	[PyTorch Link]()
+</details>
+
+<details>
+	<summary>How to support multi-nodes GPU/NPU</summary>
+	Technically reft.cpp supports multi-nodes inference and training, while multi-nodes haven't been tested due to lacking of HW resources. Please contact us if needed.
+</details>
+
+<!--
+<details>
 	<summary>How to calculate the required GPU vRAM size for a LLM's inference or training</summary>
 	
 - Inference: If a LLM weights is xB, then 2x(GB) is the minimum vRAM size needed.
@@ -305,6 +323,7 @@ reft train \
 - TP, PP need to be configured per the amount of GPUs(1, 2, 4, 8, 16...). TP*PP= the amout of GPUs.
 
 </details>
+-->
 
 <details>
 	<summary>Strictly equivalence of computational precision matters the most in LLM/LM's ops and serving optimization</summary>
