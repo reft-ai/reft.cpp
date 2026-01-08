@@ -306,7 +306,8 @@ reft train \
 
 <details>
 	<summary>Why Triton is not used in reft.cpp</summary>
-	[PyTorch Link]()
+	Because the Triton models can get up to 78% of the performance of the CUDA models on the H100 and up to 82% on the A100.
+	[CUDA-Free Inference for LLMs](https://pytorch.org/blog/cuda-free-inference-for-llms/)
 </details>
 
 <details>
