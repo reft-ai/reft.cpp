@@ -306,13 +306,15 @@ reft train \
 
 <details>
 	<summary>Why Triton is not used in reft.cpp</summary>
-	Because the Triton models can get up to 78% of the performance of the CUDA models on the H100 and up to 82% on the A100.
-	[CUDA-Free Inference for LLMs](https://pytorch.org/blog/cuda-free-inference-for-llms/)
+
+Because the Triton models can get up to 78% of the performance of the CUDA models on the H100 and up to 82% on the A100.	
+	
+[CUDA-Free Inference for LLMs](https://pytorch.org/blog/cuda-free-inference-for-llms/)
 </details>
 
 <details>
 	<summary>How to support multi-nodes GPU/NPU</summary>
-	Technically reft.cpp supports multi-nodes inference and training, while multi-nodes haven't been tested due to lacking of HW resources. Please contact us if needed.
+Technically reft.cpp supports multi-nodes inference and training, while multi-nodes haven't been tested due to lacking of HW resources. Please contact us if needed.
 </details>
 
 <!--
