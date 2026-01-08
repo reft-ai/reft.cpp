@@ -305,6 +305,13 @@ reft train \
 # FAQs
 
 <details>
+	<summary>Why reft.cpp implements all of modeling, serving and training in C++</summary>
+
+It's manly for a better performance and easy-to-use compared to Python/PyTorch-based as well as for scalability on edge-NPU.
+
+</details>
+
+<details>
 	<summary>Why Triton is not used in reft.cpp</summary>
 
 Because the Triton models can get up to 78% of the performance of the CUDA models on the H100 and up to 82% on the A100.	
