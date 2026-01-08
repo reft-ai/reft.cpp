@@ -102,11 +102,11 @@ Example model: `Qwen3/Qwen3-4B`
 
 <details>
 <summary>
-Download reft.exe and Weights file (the reft install packages of Reft.nv/Reft.amd/Reft.qc/Reft.mac are for the Nvidia/AMD/Qualcomm/Apple GPU/NPU respectively)
+Download reft.exe and Weights file (the reft install packages of reft-cuda/reft-rocm/reft-qc/reft-mac are for the Nvidia/AMD/Qualcomm/Apple GPU/NPU respectively)
 </summary>
 
 ```shell
-curl -fsL https://github.com/reft-ai/reft.cpp/releases/download/v1.0.1/reft_1.0.1-0ubuntu24.04_amd64.deb
+curl -fsL https://github.com/reft-ai/reft.cpp/releases/download/v1.0.1/reft-cuda_1.0.1-0ubuntu24.04_amd64.deb
 
 mkdir -p models
 hf download Qwen3/Qwen3-4B --load-dir ./models
@@ -118,7 +118,7 @@ hf download Qwen3/Qwen3-4B --load-dir ./models
 <summary>Install and Run</summary>
 
 ```shell
-sudo apt install -y ./reft_1.0.1-0ubuntu24.04_amd64.deb
+sudo apt install -y ./reft-cuda_1.0.1-0ubuntu24.04_amd64.deb
 ```
 
 **Note:** Please contact us for multi-nodes support
