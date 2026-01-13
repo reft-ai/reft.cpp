@@ -18,7 +18,8 @@
 - GPUs and edge-NPU supported
 - MoE/Dense LLM and VL supported
 
-<img width="878" height="500" alt="51d351143dab3af8c8fb264548c90344" src="https://github.com/user-attachments/assets/79e7f0b1-1911-49f6-a3db-da6e02f94644" />
+<img width="880" height="504" alt="509d61229a92e679b0890c9433a95311" src="https://github.com/user-attachments/assets/c0351135-4b4e-4c2f-aa6b-49d8229dae54" />
+
 
 
 ## :fire: Key Features
