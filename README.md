@@ -14,13 +14,11 @@
 
 # About
 
-`reft.cpp` is a toolkit for both inference serving and training in only one native executable file
+`reft.cpp` is a building tool to compile LLM/LMs' inference serving and training to the designated cloud-GPU or edge-NPU backends.
 
-`reft.cpp` is a building tool to make LLM/LM a native executable for inference serving and training on the specific cloud/edge NPU/GPU backend.
+- Average 20%+ faster inference and training than Python/PyTorch-based inference/training(in the same quantization/precision and use case)
 
-- 20%++ faster TTFT/TPOT than any Python/PyTorch-based servings in the same quantization/precision
-- 0 running dependencies other than Linux and CUDA(non-CUDA counterpart)
-- GPUs and edge-NPU supported
+- 0 running dependencies other than Linux/Android... system and GPU/NPU backends
 
 <img width="894" height="497" alt="8718c6fcc46772c83aec000f38bc7157" src="https://github.com/user-attachments/assets/52554eae-4f50-4558-a080-c1251fbcfca4" />
 
