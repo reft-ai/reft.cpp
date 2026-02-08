@@ -26,10 +26,10 @@
 
 ## :fire: Key Features
 
-- **Native Compile** -- C++ implement&compile for modeling, serving, training
+- **Native Compile** -- C++ implement&compile for all ops, serving, training, tokenization, processing, API server, etc
 - **OpenAI-Compatible API** -- Seamless integration with existing tools
 - **Custom Training via Plugins** -- Data-loader, Optimizer, Model layers, Loss-function
-- **Multi-Modal Support** -- Support combined text, image, audio, etc
+- **Multi-Modal Support** -- Text, vision, audio, etc
 - **Native vRAM mgt** -- Native mem mgt instead of GC to lower peak occ-mem and alloc-overhead
 
 <!--
