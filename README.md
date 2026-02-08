@@ -20,7 +20,8 @@
 
 - 0 running dependencies other than Linux/Android... system and GPU/NPU backends
 
-<img width="894" height="497" alt="8718c6fcc46772c83aec000f38bc7157" src="https://github.com/user-attachments/assets/52554eae-4f50-4558-a080-c1251fbcfca4" />
+<img width="962" height="510" alt="b6ffe2858851d2d34f6dc5fa05d866e5" src="https://github.com/user-attachments/assets/2cdb49b0-6496-46f7-8dbe-997a7430c160" />
+
 
 
 
