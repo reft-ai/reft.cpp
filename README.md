@@ -27,7 +27,7 @@
 
 ## :fire: Key Features
 
-- **Native Compile** -- C++ implement&compile for all ops, serving, training, tokenization, processing, API server, etc
+- **Native Compilation** --  Compile the whole inference/training of a LLM/LM into the native executable object
 - **OpenAI-Compatible API** -- Seamless integration with existing tools
 - **Custom Training via Plugins** -- Data-loader, Optimizer, Model layers, Loss-function
 - **Multi-Modal Support** -- Text, vision, audio, etc
