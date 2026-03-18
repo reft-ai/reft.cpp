@@ -16,9 +16,9 @@
 
 `refft.cpp` is a building tool to compile LLM/LMs' inference and training on the designated cloud-GPU or edge-NPU backends to a native executable including API, inference serving, training, model, ops, etc
 
-- Average 20%+ faster inference and training than Python/PyTorch-based inference/training(in the same quantization/precision and use case)
+- Average 20%+ faster inference and training than Python/PyTorch-based inference/training(in the same quantization/precision and use cases)
 
-- 0 running dependencies other than Linux/Android... system and GPU/NPU backends
+- 0 running dependencies other than Linux/Android/Mac system and GPU/NPU backends
 
 <img width="962" height="510" alt="b6ffe2858851d2d34f6dc5fa05d866e5" src="https://github.com/user-attachments/assets/2cdb49b0-6496-46f7-8dbe-997a7430c160" />
 
@@ -33,7 +33,7 @@
 - **Multi-Modal Support** -- Text, vision, audio, etc
 - **Native vRAM mgt** -- Native mem mgt instead of GC to lower peak occ-mem and alloc-overhead
 - **Mixed-precision quantization** -- FP16, w4a16, w8a16, etc supported per tensor/layer/group
-- **NPU dynamics** -- enable NPU support dynamic shape, MoE, control flow
+- **NPU dynamics** -- enable NPU to support dynamic shape, MoE, control flow, flexible heterogeneous compute
 
 <!--
 - **Configurable Continuous Batching Scheduler** -- Efficient request handling with dynamic batching
