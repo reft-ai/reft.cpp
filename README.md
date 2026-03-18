@@ -1,7 +1,7 @@
 <!--[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)-->
-[![Release](https://img.shields.io/github/v/release/reft-ai/reft.cpp)](https://github.com/reft-ai/reft.cpp/releases)
+[![Release](https://img.shields.io/github/v/release/reft-ai/refft.cpp)](https://github.com/reft-ai/refft.cpp/releases)
 [![Build](https://github.com/reft-ai/reft/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/reft-ai/reft/actions/workflows/release.yml)
-<!--[![Publish](https://github.com/reft-ai/reft.cpp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/reft-ai/reft/actions/workflows/docker-publish.yml))-->
+<!--[![Publish](https://github.com/reft-ai/refft.cpp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/reft-ai/reft/actions/workflows/docker-publish.yml))-->
 
 <!--![reft cc-new-logo jpg](https://github.com/user-attachments/assets/25f0c2e7-0f64-41e9-979d-ddb0ff932c4d)-->
 
@@ -57,7 +57,7 @@ Download reft.exe and Weights file (the reft install packages of reft-cuda/reft-
 </summary>
 
 ```shell
-curl -fsL https://github.com/reft-ai/reft.cpp/releases/download/v1.0.1/reft-cuda_1.0.1-0ubuntu24.04_amd64.deb
+curl -fsL https://github.com/reft-ai/refft.cpp/releases/download/v1.0.1/reft-cuda_1.0.1-0ubuntu24.04_amd64.deb
 
 mkdir -p models
 hf download Qwen3/Qwen3-0.6B --load-dir ./models
@@ -256,14 +256,14 @@ reft train \
 # FAQs
 
 <details>
-	<summary>Why reft.cpp implements all of modeling, serving and training in C++</summary>
+	<summary>Why refft.cpp implements all of modeling, serving and training in C++</summary>
 
 It's manly for a better performance and easy-to-use compared to Python/PyTorch-based as well as for scalability on edge-NPU.
 
 </details>
 
 <details>
-	<summary>Why Triton is not used in reft.cpp</summary>
+	<summary>Why Triton is not used in refft.cpp</summary>
 
 Because the Triton models can get up to 78% of the performance of the CUDA models on the H100 and up to 82% on the A100.	
 	
@@ -272,7 +272,7 @@ Because the Triton models can get up to 78% of the performance of the CUDA model
 
 <details>
 	<summary>How to support multi-nodes GPU/NPU</summary>
-Technically reft.cpp supports multi-nodes inference and training, while multi-nodes haven't been tested due to lacking of HW resources. Please contact us if needed.
+Technically refft.cpp supports multi-nodes inference and training, while multi-nodes haven't been tested due to lacking of HW resources. Please contact us if needed.
 </details>
 
 <!--
@@ -299,5 +299,5 @@ Please contact us via [haiteng@reft-ai.com](mailto:haiteng@reft-ai.com) for comm
 
 # Acknowledgment
 
-`reft.cpp` was inspired by Andrej Karpathy' [llm.c](https://github.com/karpathy/llm.c), and also referred to [HuggingFace](https://github.com/huggingface/transformers), [PyTorch](https://github.com/pytorch/pytorch), [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), [FlashAttention](https://github.com/Dao-AILab/flash-attention), [FlashInfer](https://github.com/flashinfer-ai/flashinfer).
+`refft.cpp` was inspired by Andrej Karpathy' [llm.c](https://github.com/karpathy/llm.c), and also referred to [HuggingFace](https://github.com/huggingface/transformers), [PyTorch](https://github.com/pytorch/pytorch), [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), [FlashAttention](https://github.com/Dao-AILab/flash-attention), [FlashInfer](https://github.com/flashinfer-ai/flashinfer).
 
