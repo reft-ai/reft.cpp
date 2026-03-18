@@ -41,61 +41,6 @@
 - **Flash Attention -- Optimized mem mgt for long sequences and lower memory footprint
 -->
 
-## Supported Models
-
-- :white_check_mark: : Supported
-- :coffee: : In-Progress
-
-### :zap: LLM
-
-  |            Models         |     Nvidia GPU     |        AMD GPU       |    Qualcomm Hexagon  |     Apple Silicon   |
-  |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
-  |DeepSeek-V3.2 (685B)       | :coffee: |     :coffee:         |       N/A       |        :coffee:     |
-  |DeepSeek-V3/R1 (671B)      | :coffee: |     :coffee:         |       N/A       |        :coffee:     |
-  |DeepSeek-OCR               | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen3 (0.6B-8B)            | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen3-MoE                  | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen3-MoE (30B - 235B)     | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen3-Next (80B)           | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen2.5 (0.5B - 72B)       | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Llama3.2 (1B, 3B)          | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Llama3.1 (8B, 70B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Llama3 (8B, 70B)           | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Gemma (2B - 7B)            | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |GPT-OSS (20B, 120B)        | :coffee: |     :coffee:         |       N/A       |        :coffee:     |
-
-### :zap: Vision LM
-
-  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |     Apple Silicon   |
-  |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
-  |Qwen3-VL (2B - 8B)         | :white_check_mark: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen3-VL-MoE (30B - 235B)  | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Qwen2.5-VL (3B, 7B, 72B)   | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Llama4 (Scout, Maverick)   | :coffee: |     :coffee:         |       N/A       |        :coffee:     |
-  |Llama3.2-vision (11B, 90B) | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |SAM-3D-Objects             | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |SAM-3D-Body                | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |SAM-2                      | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |SAM                        | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  
-	
-### :zap: Audio LM
-
-  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |    Apple Silicon    |
-  |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
-  |Whisper                    | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |OpenVoice2                 | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |SAM-Audio                  | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  |Melo-TTS                   | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-
-
-### :zap: Visual Features
-
-  |           Models          |      Nvidia GPU    |        AMD GPU       |   Qualcomm Hexagon   |    Apple Silicon    |
-  |:-------------------------:|:------------------:|:--------------------:|:--------------------:|:-------------------:|
-  |DINOv2                     | :coffee: |     :coffee:         |       :coffee:       |        :coffee:     |
-  
-
 ***
 
 # Download, Install and Run LLM/LM
@@ -104,7 +49,7 @@
 
 <br/>
 
-Example model: `Qwen3/Qwen3-4B`
+Example model: `Qwen3/Qwen3-0.6B`
 
 <details>
 <summary>
@@ -115,7 +60,7 @@ Download reft.exe and Weights file (the reft install packages of reft-cuda/reft-
 curl -fsL https://github.com/reft-ai/reft.cpp/releases/download/v1.0.1/reft-cuda_1.0.1-0ubuntu24.04_amd64.deb
 
 mkdir -p models
-hf download Qwen3/Qwen3-4B --load-dir ./models
+hf download Qwen3/Qwen3-0.6B --load-dir ./models
 ```
 
 </details>
@@ -131,8 +76,8 @@ sudo apt install -y ./reft-cuda_1.0.1-0ubuntu24.04_amd64.deb
 
 ```bash
 reft serve \
-  --model /workspace/models/Qwen3/Qwen3-4B \
-  --served_model_name Qwen3-4B
+  --model /workspace/models/Qwen3/Qwen3-0.6B \
+  --served_model_name Qwen3-0.6B
 ```
 
 </details>
@@ -170,7 +115,7 @@ reft serve \
 curl -Ns http://127.0.0.1:8888/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-	"model": "Qwen3-4B",
+	"model": "Qwen3-0.6B",
 	"messages": [{"role":"user", "content": "<｜begin▁of▁sentence｜><｜User｜>Who are you?<｜Assistant｜><think>\\n"}],
 	"max_tokens": 24,
 	"temperature": 0.6,
@@ -181,19 +126,19 @@ curl -Ns http://127.0.0.1:8888/v1/chat/completions \
 output
 
 ```text
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-0.6B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"role":"assistant"},"index":0,"logprobs":null,"finish_reason":null}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Greetings"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-0.6B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Greetings"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"!"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-0.6B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"!"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" I"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-0.6B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" I"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"'m"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-0.6B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"'m"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" Deep"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-0.6B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":" Deep"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
-data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-4B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
+data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chunk","created":1589478378,"model":"Qwen3-0.6B","system_fingerprint":"fp_44709d6fcb","choices":[{"delta":{"content":"Seek"},"index":0,"logprobs":null,"finish_reason":""}],"usage":null}
 
 ...
 ```
@@ -226,7 +171,7 @@ hf download llamafactory/alpaca_gpt4_en --repo-type=dataset --local-dir ./datase
 mkdir -p output
 reft train \
 	--cutoff_len 512 \
-	--model ./models/Qwen/Qwen3-4B \
+	--model ./models/Qwen/Qwen3-0.6B \
 	--block_size 512 \
 	--test_every 200 \
 	--batch_size 4 \
@@ -239,7 +184,7 @@ reft train \
 	--learning_rate_decay_frac 0.0 \
 	--use_bf16 \
 	--stage sft \
-	--checkpoint_dir ./output/checkpoints/sft-qwen3-4b-full \
+	--checkpoint_dir ./output/checkpoints/sft-Qwen3-0.6B-full \
 	--save_every 20000 \
 	--grad_accumulation_steps 32 \
 	--resume \
