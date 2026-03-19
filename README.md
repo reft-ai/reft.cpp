@@ -103,7 +103,7 @@ refft serve \
   --served_model_name Qwen3-0.6B
 ```
 
-```sh
+```text
   ████████████████████████████████████████▏ 100.0% [ 199/ 199 | 476.2 Hz | 0s<0s]  
 [2025-11-11 07:02:50.007] [GPUModelRunner(rank=0)][7] [info] Model loaded
 [2025-11-11 07:02:50.007] [GPUWorker(rank=0)][7] [info] GPU Mem Info(free=18.4 GB, total=23.5 GB)
@@ -124,7 +124,7 @@ refft serve \
 [2025-11-11 07:02:50.245] [Serve][1] [info] HTTP server listening on 0.0.0.0:8888 ...
 ```
 
-```sh
+```text
 [2026-03-19 22:43:13.499] [info] [17261] [main] QnnDsp <V> RPC Memory mapped for Weights 0x7636400000 [1193279488 B] @ VA af000000
 [2026-03-19 22:43:13.674] [info] [17261] [main] QnnDsp <V> Successfully copied 1192255488 bytes of weights! Actual bytes to transfer: 1192255488
 [2026-03-19 22:43:13.674] [info] [17261] [main] QnnDsp <V> 13979880 isInit 1
