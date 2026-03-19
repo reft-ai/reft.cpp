@@ -55,17 +55,13 @@
 <a name="using"></a>
 # Inference of LLM/LM
 
-***To run the LLM/LM on your on-premises/cloud GPUs or Edge NPU, all you need is a Reft .exe and weights file without PyTorch/Python related.***
-
-<br/>
-
 Example model: `Qwen3/Qwen3-0.6B`
 
 ## Install
 
 Please check out our [releases page](https://github.com/refinefuture-ai/refft.cpp/releases)
 
-### For Linux + CUDA
+`Linux + CUDA`
 
 * [refft-linux-x64-cuda-qwen3-20260319.tar.xz](https://github.com/reft-ai/refft.cpp/releases/download/20260319/refft-linux-x64-cuda-qwen3-20260319.tar.xz)
 * [refft-ubuntu2404-x64-cuda-qwen3-20260319.deb](https://github.com/reft-ai/refft.cpp/releases/download/20260319/refft-ubuntu2404-x64-cuda-qwen3-20260319.deb)
@@ -77,7 +73,7 @@ sudo cp refft-linux-x64-cuda-qwen3-20260319/bin/refft /usr/bin/refft
 sudo apt install ./refft-ubuntu2404-x64-cuda-qwen3-20260319.deb
 ```
 
-### For Android + NPU
+`Android + NPU`
 
 * [refft-android-aarch64-qnn-qwen3-20260319.tar.xz](https://github.com/reft-ai/refft.cpp/releases/download/20260319/refft-android-aarch64-qnn-qwen3-20260319.tar.xz)
 * [refft-android-aarch64-qnn-qwen3-moe-20260319.tar.xz](https://github.com/reft-ai/refft.cpp/releases/download/20260319/refft-android-aarch64-qnn-qwen3-moe-20260319.tar.xz)
@@ -126,6 +122,51 @@ refft serve \
 [2025-11-11 07:02:50.243] [Serve][1] [info] Init engine (profile, create_kv_cache, warmup model) took 0.23 seconds
 [2025-11-11 07:02:50.244] [Serve][1] [info] Starting API server ...
 [2025-11-11 07:02:50.245] [Serve][1] [info] HTTP server listening on 0.0.0.0:8888 ...
+```
+
+```sh
+[2026-03-19 22:43:13.499] [info] [17261] [main] QnnDsp <V> RPC Memory mapped for Weights 0x7636400000 [1193279488 B] @ VA af000000
+[2026-03-19 22:43:13.674] [info] [17261] [main] QnnDsp <V> Successfully copied 1192255488 bytes of weights! Actual bytes to transfer: 1192255488
+[2026-03-19 22:43:13.674] [info] [17261] [main] QnnDsp <V> 13979880 isInit 1
+[2026-03-19 22:43:13.674] [info] [17261] [main] QnnDsp <V> New serialized binary size = 13979880
+[2026-03-19 22:43:13.676] [info] [17261] [main] QnnDsp <V> 40 isInit 1
+[2026-03-19 22:43:13.677] [info] [17261] [main] QnnDsp <V> Found transport session 0xb4000079897a9d98 for deviceId 0x0 coreId 0x0 pdId 0x0!
+[2026-03-19 22:43:13.677] [info] [17261] [main] QnnDsp <V> Found transport session 0xb4000079897a9d98 for deviceId 0x0 coreId 0x0 pdId 0x0!
+[2026-03-19 22:43:13.899] [info] [17261] [main] QnnDsp <V> transport run [status = 0]
+[2026-03-19 22:43:13.912] [info] [17261] [main] QnnDsp <V> HtpTransport::graphPrepareDsp done. graph.m_hexNNGraphHandle = 12970367443114328064
+[2026-03-19 22:43:14.978] [info] [17261] [main] graph_prepare.cc:762:STAT: crated_byte_estimate=16674200
+[2026-03-19 22:43:18.774] [info] [17261] [main] fa_alloc.cc:2437:STAT: alloca_pickle_base=13979648
+[2026-03-19 22:43:18.774] [info] [17261] [main] fa_alloc.cc:2438:STAT: alloca_pickle_const_extent=1192255488
+[2026-03-19 22:43:18.774] [info] [17261] [main] fa_alloc.cc:2439:STAT: alloca_io_tensor=15187968
+[2026-03-19 22:43:18.774] [info] [17261] [main] fa_alloc.cc:2440:STAT: alloca_mempool_ddr=20992
+[2026-03-19 22:43:18.774] [info] [17261] [main] fa_alloc.cc:2441:STAT: alloca_mempool_spillfill_near=9109504
+[2026-03-19 22:43:18.774] [info] [17261] [main] fa_alloc.cc:2442:STAT: alloca_mempool_spillfill_far=0
+[2026-03-19 22:43:18.774] [info] [17261] [main] fa_alloc.cc:2443:STAT: alloca_mempool_const=1192251136
+[2026-03-19 22:43:18.774] [info] [17261] [main] fa_alloc.cc:2456:STAT: alloca_est_total=1216573952
+[2026-03-19 22:43:18.822] [info] [17261] [main] QnnDsp <V> Async property not supported. Skipping register Async context
+[2026-03-19 22:43:18.823] [info] [17261] [main] QnnDsp <V> Wake up free backend (id: 1)'s thread(s)
+[2026-03-19 22:43:18.823] [info] [17261] [main] QnnDsp <I> QnnGraph_finalize done. status 0x0
+[2026-03-19 22:43:18.823] [info] [17261] [main] QnnDsp <V> Deactivated logger with handle 0x1
+[2026-03-19 22:43:18.823] [info] [17261] [main] QnnDsp <V> RouterFastRPC terminateNativeOpValidatorLogs
+[2026-03-19 22:43:18.823] [info] [17261] [main] Construct rope ...
+[2026-03-19 22:43:18.826] [info] [17261] [main] Construct rope end
+[2026-03-19 22:43:18.826] [info] [17261] [main] QnnDsp <I> QnnProfile_create 0xb4000078d4df74e0
+[2026-03-19 22:43:18.826] [info] [17261] [main] QnnDsp <V> Deactivated logger with handle 0x1
+                                        ▏ 100.0% [   0/   0 | 0.0 Hz | 2s<0s]
+[2026-03-19 22:43:20.770] [info] [17261] [main] Engine is created
+[2026-03-19 22:43:20.770] [info] [17261] [main] Starting API server ...
+[2026-03-19 22:43:20.770] [info] [17261] [main] Served model name: [Qwen3-0.6B]
+[2026-03-19 22:43:23.610] [info] [17261] [main] Vocab size: 151669
+[2026-03-19 22:43:23.617] [info] [17261] [main] Ids of "Hello world!": [[9707,1879,0]
+[2026-03-19 22:43:23.621] [info] [17261] [main] Apply chat template:
+{% for message in messages %}<|im_start|>{{message['role']}}
+{{message['content']}}<|im_end|>{% endfor %}{% if add_generation_prompt %}
+<|im_start|>assistant
+{% endif %}
+[2026-03-19 22:43:23.621] [info] [17261] [main] Create LLM text processor
+[2026-03-19 22:43:23.785] [info] [17261] [main] Start server
+[2026-03-19 22:43:23.794] [info] [17526] [main] HTTP server is listening on 0.0.0.0:8888 ...
+[2026-03-19 22:43:23.795] [info] [17526] [main] ServerMonitor is started.
 ```
 
 ## Connect via CLI
