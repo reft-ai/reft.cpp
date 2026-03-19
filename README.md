@@ -41,9 +41,13 @@
 - **Flash Attention -- Optimized mem mgt for long sequences and lower memory footprint
 -->
 
+<a href="https://refinefuture.ai" target="_blank">
+	<img width="2736" height="1650" alt="image" src="https://github.com/user-attachments/assets/1002af12-906d-467e-841a-9b63a5b7e45f" />
+</a>
+
 ***
 <a name="using"></a>
-# Download, Install and Run LLM/LM
+# Inference of LLM/LM
 
 ***To run the LLM/LM on your on-premises/cloud GPUs or Edge NPU, all you need is a Reft .exe and weights file without PyTorch/Python related.***
 
