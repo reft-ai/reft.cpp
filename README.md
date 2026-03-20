@@ -122,8 +122,6 @@ sudo apt install ./refft-ubuntu2404-x64-cuda-qwen3-20260319.deb
 mkdir -p models
 hf download Qwen3/Qwen3-0.6B --load-dir ./models
 
-*** Support: / ***
-
 # Launch server
 refft serve \
   --model /workspace/models/Qwen3/Qwen3-0.6B \
