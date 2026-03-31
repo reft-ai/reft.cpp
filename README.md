@@ -232,7 +232,7 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 
 </details>
 
-### For Apple silicon
+### For Apple Silicon
 
 |            Tool            |         Description |
 |----------------------------|---------------------|
