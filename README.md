@@ -71,8 +71,8 @@
 ### For QNN
 |        Model Package       |         Description |
 |----------------------------|---------------------|
-| [android-aarch64-qnn-qwen3](https://github.com/refinefuture-ai/refft.cpp/releases/download/github_draft_20260401/android-aarch64-qnn-qwen3-dynamic-fp16.tar.gz) | 0.6B/1.7B/4B/8B/14B/32B supported <br/> Notes: FlashAtttion ops supported <br/> Quantization can be set to w4a16, w8a16, w4afp16, w8afp16, fp16 and default is fp16<br/> Tested on OnePlus15/SM8850/16GB-DDR|
-| [android-aarch64-qnn-qwen3-moe](https://github.com/refinefuture-ai/refft.cpp/releases/download/github_draft_20260401/android-aarch64-qnn-qwen3moe-fa_moe_hybrid-fp16.tar.gz) | 30B-A3B supported <br/> Notes: MoE, FlashAtttion ops supported <br/> TP supported for multi-HTPs backends <br/> Quantization can be set to w4a16, w8a16, w4afp16, w8afp16, fp16 and default is fp16 <br/> Tested on OnePlus15/SM8850/16GB-DDR|
+| [refft-android-aarch64-qnn-qwen3](https://github.com/refinefuture-ai/refft.cpp/releases/download/github_draft_20260401/android-aarch64-qnn-qwen3-dynamic-fp16.tar.gz) | 0.6B/1.7B/4B/8B/14B/32B supported <br/> Notes: FlashAtttion ops supported <br/> Quantization can be set to w4a16, w8a16, w4afp16, w8afp16, fp16 and default is fp16<br/> Tested on OnePlus15/SM8850/16GB-DDR|
+| [refft-android-aarch64-qnn-qwen3-moe](https://github.com/refinefuture-ai/refft.cpp/releases/download/github_draft_20260401/android-aarch64-qnn-qwen3moe-fa_moe_hybrid-fp16.tar.gz) | 30B-A3B supported <br/> Notes: MoE, FlashAtttion ops supported <br/> TP supported for multi-HTPs backends <br/> Quantization can be set to w4a16, w8a16, w4afp16, w8afp16, fp16 and default is fp16 <br/> Tested on OnePlus15/SM8850/16GB-DDR|
 
 
 
@@ -234,7 +234,7 @@ data: {"id":"d971c92d-8505-4152-b8b3-cf9726e19127","object":"chat.completion.chu
 
 ### For Apple Silicon
 
-|            Tool            |         Description |
+|        Model Packcage      |         Description |
 |----------------------------|---------------------|
 | [refft-macos-arm64-mlx-qwen3-20260323.tar.xz](https://github.com/refinefuture-ai/refft.cpp/releases/download/20260323/refft-macos-arm64-mlx-qwen3-20260323.tar.xz) | 0.6B/1.7B/4B/8B/14B/32B supported |
 | [refft-macos-arm64-mlx-qwen3-moe-20260323.tar.xz](https://github.com/refinefuture-ai/refft.cpp/releases/download/20260323/refft-macos-arm64-mlx-qwen3-moe-20260323.tar.xz) | 30B-A3B/235B-A22B supported |
