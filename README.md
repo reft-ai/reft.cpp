@@ -69,10 +69,10 @@
 
 
 ### For QNN
-|            Tool            |         Description |
+|        Model Package       |         Description |
 |----------------------------|---------------------|
-| android-aarch64-qnn-qwen3 | 0.6B/1.7B/4B/8B/14B/32B supported, Tested on OnePlus15/SM8850/16GB-DDR|
-| android-aarch64-qnn-qwen3-moe | 30B-A3B supported <br/> Notes: MoE, FlashAtttion ops supported; TP supported for multi-HTPs backends; Quantization can be set to w4a16, w8a16, w4afp16, w8afp16, fp16 and default is fp16, Tested on OnePlus15/SM8850/16GB-DDR|
+| android-aarch64-qnn-qwen3 | 0.6B/1.7B/4B/8B/14B/32B supported, Notes: FlashAtttion ops supported; Quantization can be set to w4a16, w8a16, w4afp16, w8afp16, fp16 and default is fp16; Tested on OnePlus15/SM8850/16GB-DDR|
+| android-aarch64-qnn-qwen3-moe | 30B-A3B supported <br/> Notes: MoE, FlashAtttion ops supported; TP supported for multi-HTPs backends; Quantization can be set to w4a16, w8a16, w4afp16, w8afp16, fp16 and default is fp16; Tested on OnePlus15/SM8850/16GB-DDR|
 
 
 
@@ -102,7 +102,7 @@ ANDROID_DST=/data/local/tmp/refft_release/android-aarch64-qnn-qwen3moe-fa_moe_hy
 
 ### For Nvidia
 
-|            Tool            |         Description |
+|        Model Package       |         Description |
 |----------------------------|---------------------|
 | [refft-linux-x64-cuda-qwen3-20260323.tar.xz](https://github.com/refinefuture-ai/refft.cpp/releases/download/20260323/refft-linux-x64-cuda-qwen3-20260323.tar.xz) | 0.6B/1.7B/4B/8B/14B/32B supported |
 | [refft-ubuntu2404-x64-cuda-qwen3-20260323.deb](https://github.com/refinefuture-ai/refft.cpp/releases/download/20260323/refft-ubuntu2404-x64-cuda-qwen3-20260323.deb) | 0.6B/1.7B/4B/8B/14B/32B supported |
