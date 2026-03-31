@@ -72,7 +72,7 @@
 |            Tool            |         Description |
 |----------------------------|---------------------|
 | android-aarch64-qnn-qwen3 | 0.6B/1.7B/4B/8B/14B/32B supported, Tested on OnePlus15/SM8850/16GB-DDR|
-| android-aarch64-qnn-qwen3-moe | 30B-A3B supported <br/> Layers are trimmed for running on OnePlus15/SM8850/16GB-DDR, Notes: MoE, FlashAtttion ops supported; TP supported for multi-HTPs backends; Quantization can be set to w4a16, w8a16, w4afp16, w8afp16, fp16 and default is fp16, Tested on OnePlus15/SM8850/16GB-DDR|
+| android-aarch64-qnn-qwen3-moe | 30B-A3B supported <br/> Notes: MoE, FlashAtttion ops supported; TP supported for multi-HTPs backends; Quantization can be set to w4a16, w8a16, w4afp16, w8afp16, fp16 and default is fp16, Tested on OnePlus15/SM8850/16GB-DDR|
 
 
 
