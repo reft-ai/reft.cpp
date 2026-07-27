@@ -117,6 +117,14 @@ Options such as `--prefix`, `--tag` and `--hexagon-version` are documented in [r
 
 Everything is one binary — `refft-hexagon` — with three commands: `cli`, `serve`, `bench`.
 
+The examples use [refinefuture-ai/SmolVLM2-500M-Video-Instruct-REFFT](https://huggingface.co/refinefuture-ai/SmolVLM2-500M-Video-Instruct-REFFT), a Hexagon serving bundle. Download it first:
+
+```bash
+hf download refinefuture-ai/SmolVLM2-500M-Video-Instruct-REFFT --local-dir ~/SmolVLM2-500M-Video-Instruct-REFFT
+```
+
+`--model` points at the bundle directory, the one holding `serving_manifest.json`.
+
 Linux / Termux, from the folder printed by the installer:
 
 ```bash
@@ -126,19 +134,20 @@ export ADSP_LIBRARY_PATH=$PWD/lib
 export REFFT_HEXAGON_MODULE_PATH=$PWD/lib/librefft_hexagon_v73.so   # match the .so in lib/
 
 ./bin/refft-hexagon help
-./bin/refft-hexagon cli   --model_dir /path/to/model --backend hexagon --prompt "Who are you?" --max_new_tokens 128
-./bin/refft-hexagon serve --model_dir /path/to/model --backend hexagon --port 8080
+./bin/refft-hexagon cli   --model ~/SmolVLM2-500M-Video-Instruct-REFFT/SmolVLM2-500M-Video-Instruct-w4.refft --backend hexagon --prompt "Who are you?" --max_new_tokens 128
+./bin/refft-hexagon serve --model ~/SmolVLM2-500M-Video-Instruct-REFFT/SmolVLM2-500M-Video-Instruct-w4.refft --backend hexagon --port 8080
 ```
 
 Android over `adb`:
 
 ```bash
+adb push ~/SmolVLM2-500M-Video-Instruct-REFFT/SmolVLM2-500M-Video-Instruct-w4.refft /data/local/tmp/
 adb shell
 cd /data/local/tmp/refft-hexagon
 export LD_LIBRARY_PATH=$PWD/lib
 export ADSP_LIBRARY_PATH=$PWD/lib
 
-./bin/refft-hexagon cli --model_dir /data/local/tmp/model --backend hexagon --prompt "Who are you?" --max_new_tokens 128
+./bin/refft-hexagon cli --model /data/local/tmp/SmolVLM2-500M-Video-Instruct-w4.refft --backend hexagon --prompt "Who are you?" --max_new_tokens 128
 ```
 
 Windows (PowerShell):
@@ -147,8 +156,8 @@ Windows (PowerShell):
 cd $env:LOCALAPPDATA\Programs\refft-hexagon
 $env:ADSP_LIBRARY_PATH = "$PWD\lib"
 
-.\bin\refft-hexagon.exe cli   --model_dir C:\path\to\model --backend hexagon --prompt "Who are you?" --max_new_tokens 128
-.\bin\refft-hexagon.exe serve --model_dir C:\path\to\model --backend hexagon --port 8080
+.\bin\refft-hexagon.exe cli   --model $HOME\SmolVLM2-500M-Video-Instruct-REFFT\SmolVLM2-500M-Video-Instruct-w4.refft --backend hexagon --prompt "Who are you?" --max_new_tokens 128
+.\bin\refft-hexagon.exe serve --model $HOME\SmolVLM2-500M-Video-Instruct-REFFT\SmolVLM2-500M-Video-Instruct-w4.refft --backend hexagon --port 8080
 ```
 
 | Topic | Options |
@@ -156,7 +165,7 @@ $env:ADSP_LIBRARY_PATH = "$PWD\lib"
 | Commands | `help`, `version`, `cli`, `serve`, `bench serve --prompt "Who are you?"` |
 | Generation | `--max_new_tokens <n>` (default 1 for `cli`, 16 for `serve`), `--chat`, `--stream true`, `--print_perf_metrics` |
 | Sampling | pass `--sampler chain` first, then `--do_sample`, `--temperature`, `--top_k`, `--top_p`, `--min_p`, `--repetition_penalty`, `--ignore_eos` |
-| Models | `qwen2_5`, `qwen3`, `qwen3_5` (text and image), `qwen3_moe` — list them with `cli --list_models` |
+| Model | serving bundle from [refinefuture-ai/SmolVLM2-500M-Video-Instruct-REFFT](https://huggingface.co/refinefuture-ai/SmolVLM2-500M-Video-Instruct-REFFT); the binary's built-in builders are listed by `cli --list_models` |
 
 ### 3. Chat with the server
 
@@ -170,7 +179,7 @@ curl http://127.0.0.1:8080/health
 curl http://127.0.0.1:8080/v1/chat/completions \
   -H 'Content-Type: application/json' \
   -d '{
-    "model": "qwen3",
+    "model": "SmolVLM2-500M-Video-Instruct",
     "messages": [{"role": "user", "content": "Explain KV cache reuse briefly."}],
     "max_tokens": 128,
     "stream": false
